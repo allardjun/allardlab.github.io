@@ -4,7 +4,7 @@
 # inserted automagically in the webpage. To make
 # this work, you have to use › layout: frontpage
 #
-layout: page
+layout: page-wide
 header:
   #image_fullwidth: header_unsplash_12.jpg
 # widget1:
