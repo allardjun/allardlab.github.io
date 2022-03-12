@@ -1,5 +1,5 @@
 ---
-layout              : page-wide
+layout              : page-extrawide
 permalink           : "/people/"
 ---
 
@@ -20,7 +20,7 @@ permalink           : "/people/"
 </style> -->
 
 <div class="row"> <!-- This should contain everything on this page content: both people and fun photos-->
-    <div class="columns small-12 medium-12 large-8"> <!-- Column to contain all people content -->
+    <div class="columns small-12 medium-12 large-6"> <!-- Column to contain all people content -->
         <div class="row">
             <div class="columns small-12">
                 <h1>PEOPLE</h1>
@@ -111,47 +111,51 @@ permalink           : "/people/"
     </div> <!-- Done column that contains all people content-->
     <!-- Photos of fun -->
     <!-- 2019 -->
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}sohyeon2019.jpg">
     </div>
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}group19f.jpg" >
     </div>
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}img_20191126_114741.jpg" >
     </div>
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}matt2019.jpg">
     </div>
     <!-- 2018 -->
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}20180330allardgroupphoto.jpeg">
     </div>
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}39273544_10156593333079694_8710688989096443904_n.jpg">
     </div>
     <!-- 2017 -->
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}img_20170422_153511.jpg" >
     </div>
-    <div class="column small-12 medium-12 large-4">
+    <!--
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}img_20170402_022106.jpg" >
     </div>
+    -->
     <!-- 2016 -->
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}img_0064.jpg" >
     </div>
     <!-- 2015 -->
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}allardlab2015largecropped512.jpeg" >
     </div>
     <!-- 2014 -->
-    <div class="column small-12 medium-12 large-4">
+    <!--
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}photoderekbiophys2014_390px.jpeg">
     </div>
-    <div class="column small-12 medium-12 large-4">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}photogroup390px.jpeg">
     </div>
+    -->
 
 </div>
 
