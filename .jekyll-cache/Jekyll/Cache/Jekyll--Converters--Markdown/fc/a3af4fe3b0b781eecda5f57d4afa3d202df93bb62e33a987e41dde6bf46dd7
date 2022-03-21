@@ -1,11 +1,4 @@
----
-layout: page
-permalink: /publications/
-homepage: false
----
-
-Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAAAJ&amp;hl=en">Google Scholar</a> and <a href="https://www.ncbi.nlm.nih.gov/sites/myncbi/jun.allard.1/bibliography/48587442/public/?sort=date&amp;direction= descending">PubMed</a>.
-
+I"5<p>Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAAAJ&amp;hl=en">Google Scholar</a> and <a href="https://www.ncbi.nlm.nih.gov/sites/myncbi/jun.allard.1/bibliography/48587442/public/?sort=date&amp;direction= descending">PubMed</a>.</p>
 
 <ul class="publist">
 	<li>
@@ -245,12 +238,13 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 		Allard, J.,  
 		<span class="paper-title">Mathematics and biophysics of cortical microtubules in plants</span>,
 		PhD Thesis, University of British Columbia (2010),
-		<a href="{{ site.urlfiles }}allard-thesis-ubc2010.pdf">pdf</a>
+		<a href="/files/allard-thesis-ubc2010.pdf">pdf</a>
 	</li>
 	<li>
 		Allard, J.,  
 		<span class="paper-title">Models of the actin-like MreB helix in bacteria</span>,
 		MSc Thesis, Dalhousie University (2007), 
-		<a href="{{ site.urlfiles }}allard-thesis-dal2007.pdf">pdf</a>
+		<a href="/files/allard-thesis-dal2007.pdf">pdf</a>
 	</li>
 </ul>
+:ET
