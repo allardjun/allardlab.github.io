@@ -47,14 +47,20 @@ permalink           : "/people/"
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
                 <div><b>Sohyeon Park</b><br>
-                MSCB PhD student
-                co-advised with Xaoyu Shi</div>
+                MSCB PhD student<br>
+                co-advised with <a href="https://xyushi.wixsite.com/xshi">Xaoyu Shi</a></div>
+            </div>
+            <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><b>Jonathan Rodriguez</b><br>
+                MSCB PhD student<br>
+                Primary advisor <a href="https://ccbs.uci.edu/team/john-lowengrub/">John Lowengrub</a></div>
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
                 <div><b>Dr. Rob Taylor</b><br>
-                PhD in Physics
-                co-advised with Elizabeth Read</div>
+                PhD in Physics<br>
+                co-advised with <a href="https://readlab.eng.uci.edu/">Elizabeth Read</a></div>
             </div>
         </div> <!-- Done row with current people -->
         <div class="row"> <!-- past members section -->
@@ -110,10 +116,27 @@ permalink           : "/people/"
         </div> <!-- Done row with all past people -->
     </div> <!-- Done column that contains all people content-->
     <!-- Photos of fun -->
-    <!-- 2019 -->
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}sohyeon2019.jpg">
     </div>
+     <!-- 2022 -->
+    <!-- <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}IMG_4706.jpg">
+    </div> -->
+    <!-- <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20220220_232140407.jpg">
+    </div> -->
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20220220_184131302.PORTRAIT.jpg">
+    </div>
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20220223_052932459.NIGHT.jpg">
+    </div>
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20220223_022415323.NIGHT_2.jpg">
+    </div>
+    <!-- 2019 -->
+
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}group19f.jpg" >
     </div>
