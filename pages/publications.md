@@ -9,8 +9,15 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 
 <ul class="publist">
 	<li>
+		Park, S., Kim, H., Wang, W., Eom, D.S., Allard, J., 
+		<span class="paper-title">Zebrafish airineme shape is optimized between ballistic search and diffusive search</span>,
+		eLife, accepted (2022). 
+		<a href="https://www.biorxiv.org/content/10.1101/2021.10.24.465630v3">BioRXiv.org</a>
+	</li>
+	<li>
 		Taylor, R., Allard, J., Read, E.L., 
 		<span class="paper-title">Simulation of receptor triggering by kinetic segregation shows role of oligomers and close-contacts</span>,
+		Biophys J, 121, 1–15 (2022). 
 		<a href="https://www.biorxiv.org/content/10.1101/2021.09.29.462451v1.abstract">BioRXiv.org</a>
 	</li>
 	<li>
