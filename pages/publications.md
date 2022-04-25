@@ -9,6 +9,12 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 
 <ul class="publist">
 	<li>
+		Park, S., Kim, H., Wang, W., Eom, D.S., Allard, J., 
+		<span class="paper-title">Zebrafish airineme shape is optimized between ballistic search and diffusive search</span>,
+		eLife, accepted (2022). 
+		<a href="https://www.biorxiv.org/content/10.1101/2021.10.24.465630v3">BioRXiv.org</a>
+	</li>
+	<li>
 		Goyette, J., Depoil, D, Yang, Z.,  Isaacson, S.A.,  Allard, J., van der Merwe, A.,  Gaus, K.,  Dustin, M., Dushek, O., 
 		<span class="paper-title">Dephosphorylation accelerates the dissociation of ZAP70 from the T cell receptor</span>,
 		Proceedings of National Academy of Sciences, 1;119(9):e2116815119 (2022),
@@ -17,7 +23,7 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 	<li>
 		Taylor, R., Allard, J., Read, E.L., 
 		<span class="paper-title">Simulation of receptor triggering by kinetic segregation shows role of oligomers and close-contacts</span>,
-		Biophys J, in press (2022)
+		Biophys J, 121, 1–15 (2022). 
 		<a href="https://www.biorxiv.org/content/10.1101/2021.09.29.462451v1.abstract">BioRXiv.org</a>
 	</li>
 	<li>
