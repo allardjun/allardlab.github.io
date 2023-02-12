@@ -41,11 +41,6 @@ permalink           : "/people/"
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Trini Nguyen</b><br>
-                MSCB PhD student</div>
-            </div>
-            <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
                 <div><b>Sohyeon Park</b><br>
                 MSCB PhD student<br>
                 co-advised with <a href="https://xyushi.wixsite.com/xshi">Xaoyu Shi</a></div>
@@ -58,9 +53,8 @@ permalink           : "/people/"
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Dr. Rob Taylor</b><br>
-                PhD in Physics<br>
-                co-advised with <a href="https://readlab.eng.uci.edu/">Elizabeth Read</a></div>
+                <div><b>Ke Xu</b><br>
+                UCI Physics/CS undergraduate</div>
             </div>
         </div> <!-- Done row with current people -->
         <div class="row"> <!-- past members section -->
@@ -69,6 +63,17 @@ permalink           : "/people/"
             </div>
         </div>
         <div class="row align-middle"> <!-- Row with all past people -->
+            <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><b>Dr. Rob Taylor</b><br>
+                PhD in Physics<br>
+                co-advised with <a href="https://readlab.eng.uci.edu/">Elizabeth Read</a></div>
+            </div>
+            <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><b>Trini Nguyen</b><br>
+                MSCB PhD student</div>
+            </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
                 <div><b>Matt Bovyn</b>, PhD 2021</div>
@@ -116,16 +121,29 @@ permalink           : "/people/"
         </div> <!-- Done row with all past people -->
     </div> <!-- Done column that contains all people content-->
     <!-- Photos of fun -->
+     <!-- 2022 -->
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20221212_171623459.jpg">
+    </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20221212_180556588.jpg">
+    </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20221212_195546518.jpg">
+    </div>
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20221213_002818574~2.jpg">
+    </div>
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}sohyeon2019.jpg">
     </div>
      <!-- 2022 -->
-    <!-- <div class="column small-12 medium-12 large-6">
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}IMG_4706.jpg">
-    </div> -->
-    <!-- <div class="column small-12 medium-12 large-6">
+    </div> 
+    <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}PXL_20220220_232140407.jpg">
-    </div> -->
+    </div> 
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}PXL_20220220_184131302.PORTRAIT.jpg">
     </div>
@@ -136,7 +154,6 @@ permalink           : "/people/"
         <img src="{{ site.urlimg }}PXL_20220223_022415323.NIGHT_2.jpg">
     </div>
     <!-- 2019 -->
-
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}group19f.jpg" >
     </div>

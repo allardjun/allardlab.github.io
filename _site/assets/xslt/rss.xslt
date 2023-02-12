@@ -36,8 +36,8 @@
 
 	<!-- Search Engine Optimization -->
 	<meta name="description" content="Jun Allard - Mathematical Biology, Biophysics Cell and Molecular Mechanics @ University of California Irvine">
-	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
-	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
+	<meta name="google-site-verification" content="gQUhvWN0nVy6KWBw5Mriq0BRGaMTq2ck-wyh99SqbSU">
+	
 	
 	
 	
