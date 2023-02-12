@@ -9,9 +9,14 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 
 <ul class="publist">
 	<li>
+		Liang, G., Yin, H., Allard, J., Ding, F.
+		<span class="paper-title">Cost-efficient boundary-free surface patterning achieves high effective-throughput of time-lapse microscopy experiments </span>,
+		PLOS ONE, (2022) 17(10): e0275804
+	</li>
+	<li>
 		Park, S., Kim, H., Wang, W., Eom, D.S., Allard, J., 
 		<span class="paper-title">Zebrafish airineme shape is optimized between ballistic search and diffusive search</span>,
-		eLife, accepted (2022). 
+		eLife, 2022;11:e7569 (2022). 
 		<a href="https://www.biorxiv.org/content/10.1101/2021.10.24.465630v3">BioRXiv.org</a>
 	</li>
 	<li>
