@@ -70,9 +70,10 @@ permalink           : "/people/"
         <div class="row align-middle"> <!-- Row with all past people -->
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Dr. Rob Taylor</b><br>
+                <div><b>Rob Taylor</b><br>
                 PhD in Physics<br>
-                co-advised with <a href="https://readlab.eng.uci.edu/">Elizabeth Read</a></div>
+                co-advised with <a href="https://readlab.eng.uci.edu/">Elizabeth Read</a><br>
+                Subsequent position: Merck</div>
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
@@ -81,11 +82,13 @@ permalink           : "/people/"
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Matt Bovyn</b>, PhD 2021</div>
+                <div><b>Matt Bovyn</b>, PhD 2021<br>
+                Subsequent position: Max Planck Institute for Cell Biology and Genetics</div>
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Lara Clemens</b>, PhD 2020</div>
+                <div><b>Lara Clemens</b>, PhD 2020<br>
+                Subsequent position: Quantitative Systems Pharmacology at Simulations Plus</div>
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
