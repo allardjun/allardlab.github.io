@@ -1,9 +1,4 @@
----
-layout              : page-extrawide
-permalink           : "/people/"
----
-
-<!-- <style>
+I"6"<!-- <style>
     .peoplewrapper {
         display: grid;
         grid-template-columns: 1fr 2fr; 
@@ -28,37 +23,36 @@ permalink           : "/people/"
         </div>
         <div class="row align-middle">
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}photojun.jpg" width="192"></div>
-                <div><b>Jun Allard</b><br>
+                <div><img class="peoplephoto" src="/images/photojun.jpg" width="192" /></div>
+                <div><b>Jun Allard</b><br />
                 Associate Professor, 
                 Department of Mathematics, 
                 Department of Physics and Astronomy</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}brady_192px.jpg" width="192"></div>
-                <div><b>Brady Berg</b><br>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
+                <div><b>Brady Berg</b><br />
                 MSCB PhD student</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}jack_image0_192px.jpeg" width="192"></div>
-                <div><b>Jack Corrette</b><br>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
+                <div><b>Jack Corrette</b><br />
                 MSCB PhD student</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}SohyeonPark_192px.jpeg" width="192"></div>
-                <div><b>Sohyeon Park</b><br>
-                MSCB PhD student<br>
-                co-advised with <a href="https://xyushi.wixsite.com/xshi">Xaoyu Shi</a><br>
-                <a href="https://sites.google.com/uci.edu/sohyeonpark/about-me">website</a></div>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
+                <div><b>Sohyeon Park</b><br />
+                MSCB PhD student<br />
+                co-advised with <a href="https://xyushi.wixsite.com/xshi">Xaoyu Shi</a></div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Jonathan Rodriguez</b><br>
-                MSCB PhD student<br>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
+                <div><b>Jonathan Rodriguez</b><br />
+                MSCB PhD student<br />
                 Primary advisor <a href="https://ccbs.uci.edu/team/john-lowengrub/">John Lowengrub</a></div>
             </div>
             <!-- <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192"></div>
                 <div><b>Ke Xu</b><br>
                 UCI Physics/CS undergraduate</div>
             </div> -->
@@ -70,33 +64,33 @@ permalink           : "/people/"
         </div>
         <div class="row align-middle"> <!-- Row with all past people -->
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Rob Taylor</b><br>
-                PhD in Physics<br>
-                co-advised with <a href="https://readlab.eng.uci.edu/">Elizabeth Read</a><br>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
+                <div><b>Rob Taylor</b><br />
+                PhD in Physics<br />
+                co-advised with <a href="https://readlab.eng.uci.edu/">Elizabeth Read</a><br />
                 Subsequent position: Merck</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Trini Nguyen</b><br>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
+                <div><b>Trini Nguyen</b><br />
                 MSCB PhD student</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Matt Bovyn</b>, PhD 2021<br>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
+                <div><b>Matt Bovyn</b>, PhD 2021<br />
                 Subsequent position: Max Planck Institute for Cell Biology and Genetics</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Lara Clemens</b>, PhD 2020<br>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
+                <div><b>Lara Clemens</b>, PhD 2020<br />
                 Subsequent position: Quantitative Systems Pharmacology at Simulations Plus</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
                 <div><b>Kathryn Manakova,</b> PhD 2017</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><img class="peoplephoto" src="/images/Afavicon-192x192.png" width="192" /></div>
                 <div><b>Derek Bryant</b>, PhD 2016</div>
             </div>
             <div> <!-- OTHER PAST -->
@@ -128,91 +122,87 @@ permalink           : "/people/"
                     </ul>
                     </li>
                 </ul>
-                <hr>
+                <hr />
             </div>
         </div> <!-- Done row with all past people -->
     </div> <!-- Done column that contains all people content-->
     <!-- Photos of fun -->
-    <!-- 2023 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20231118_212151696.jpg">
-    </div> 
      <!-- 2022 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20221212_171623459.jpg">
+        <img src="/images/PXL_20221212_171623459.jpg" />
     </div> 
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20221212_180556588.jpg">
+        <img src="/images/PXL_20221212_180556588.jpg" />
     </div> 
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20221212_195546518.jpg">
+        <img src="/images/PXL_20221212_195546518.jpg" />
     </div>
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20221213_002818574~2.jpg">
+        <img src="/images/PXL_20221213_002818574~2.jpg" />
     </div>
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}sohyeon2019.jpg">
+        <img src="/images/sohyeon2019.jpg" />
     </div>
      <!-- 2022 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}IMG_4706.jpg">
+        <img src="/images/IMG_4706.jpg" />
     </div> 
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20220220_232140407.jpg">
+        <img src="/images/PXL_20220220_232140407.jpg" />
     </div> 
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20220220_184131302.PORTRAIT.jpg">
+        <img src="/images/PXL_20220220_184131302.PORTRAIT.jpg" />
     </div>
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20220223_052932459.NIGHT.jpg">
+        <img src="/images/PXL_20220223_052932459.NIGHT.jpg" />
     </div>
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20220223_022415323.NIGHT_2.jpg">
+        <img src="/images/PXL_20220223_022415323.NIGHT_2.jpg" />
     </div>
     <!-- 2019 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}group19f.jpg" >
+        <img src="/images/group19f.jpg" />
     </div>
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}img_20191126_114741.jpg" >
+        <img src="/images/img_20191126_114741.jpg" />
     </div>
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}matt2019.jpg">
+        <img src="/images/matt2019.jpg" />
     </div>
     <!-- 2018 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}20180330allardgroupphoto.jpeg">
+        <img src="/images/20180330allardgroupphoto.jpeg" />
     </div>
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}39273544_10156593333079694_8710688989096443904_n.jpg">
+        <img src="/images/39273544_10156593333079694_8710688989096443904_n.jpg" />
     </div>
     <!-- 2017 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}img_20170422_153511.jpg" >
+        <img src="/images/img_20170422_153511.jpg" />
     </div>
     <!--
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}img_20170402_022106.jpg" >
+        <img src="/images/img_20170402_022106.jpg" >
     </div>
     -->
     <!-- 2016 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}img_0064.jpg" >
+        <img src="/images/img_0064.jpg" />
     </div>
     <!-- 2015 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}allardlab2015largecropped512.jpeg" >
+        <img src="/images/allardlab2015largecropped512.jpeg" />
     </div>
     <!-- 2014 -->
     <!--
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}photoderekbiophys2014_390px.jpeg">
+        <img src="/images/photoderekbiophys2014_390px.jpeg">
     </div>
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}photogroup390px.jpeg">
+        <img src="/images/photogroup390px.jpeg">
     </div>
     -->
 
 </div>
 
-
+:ET
