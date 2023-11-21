@@ -45,7 +45,7 @@ homepage: true
 ---
 
 <div class="row">
-  <div class="columns small-12 medium-12 large-7" style="text-align:justify">
+  <div class="columns small-12 medium-12 large-12" style="text-align:justify">
 
 <section markdown="1">  
 Cells are nanometer-scale problem solving machines. Our broad goal is to understand how cells use force, space and time to perform tasks and exploit problem solving strategies. We use mathematical and computational modeling, in collaboration with experimentalists at UC Irvine and around the world.
@@ -58,9 +58,13 @@ We’re always interested in hearing from prospective graduate students and post
 
 </section>
 
+
+  <!--
   </div>
   <div class="columns small-12 medium-12 large-5" style="text-align:center;">
     <a class="twitter-timeline" data-width="250" data-height="800" data-dnt="true" data-theme="dark" href="https://twitter.com/allardlab?ref_src=twsrc%5Etfw" data-chrome="transparent noscrollbar">Tweets by allardlab</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
-</div>
+
+</div> 
+ -->
 

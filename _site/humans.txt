@@ -16,7 +16,11 @@ Theme: http://phlow.github.io/feeling-responsive/
 
 /* SITE */
 
+<<<<<<< HEAD
+Last Updated: 2023/11/20
+=======
 Last Updated: 2023/11/17
+>>>>>>> 45fe5a6b2a28396a21283d32802229206963e640
 Standards: HTML5, CSS3
 Software: Sublime Text, Chrome, Jekyll, Git, Imageoptim, JPEGMini, Gulp.js, Sass
 Components: Foundation Framework, Modernizr, jQuery, Backstretch.js, Reveal
