@@ -94,7 +94,7 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 	<li>
 		Bergman, J. P.†, Bovyn, M. J.†, Gudheti, M. V., Gross, S. P., Allard, J. F., Vershinin, M. D.,  
 		<span class="paper-title">Cargo navigation across 3D microtubule intersections</span>.
-		Proceedings of National Academy of Sciences (2017). †These authors contributed equally. | 
+		Proceedings of National Academy of Sciences 115 (3) 537-542 (2018). †These authors contributed equally. 
 		<a href="https://pubmed.ncbi.nlm.nih.gov/29295928/">PubMed</a>
 	</li>
 	<li>
