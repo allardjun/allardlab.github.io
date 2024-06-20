@@ -9,8 +9,9 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 
 <ul class="publist">
 	<li>
-		Reddy, B., Allipeta, N., Allard, J., Gross, S., 
-		<span class="paper-title">A new method to experimentally quantify dynamics of initial protein-protein interactions</span>, in print, Communications Biology (2024)
+		Reddy, B., Allipeta, N., Allard, J., Gross, S.,
+		<span class="paper-title">A new method to experimentally quantify dynamics of initial protein-protein interactions</span>,
+		Communications Biology (2024)
 	</li>
 	<li>
 		Liang, G., Yin, H., Allard, J., Ding, F.
