@@ -9,6 +9,10 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 
 <ul class="publist">
 	<li>
+		Reddy, B., Allipeta, N., Allard, J., Gross, S., 
+		<span class="paper-title">A new method to experimentally quantify dynamics of initial protein-protein interactions</span>, in print, Communications Biology (2024)
+	</li>
+	<li>
 		Liang, G., Yin, H., Allard, J., Ding, F.
 		<span class="paper-title">Cost-efficient boundary-free surface patterning achieves high effective-throughput of time-lapse microscopy experiments </span>,
 		PLOS ONE, (2022) 17(10): e0275804
