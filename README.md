@@ -8,7 +8,9 @@ To compile locally,
 
 ```bundle exec jekyll serve```
 
+## Troubleshooting
 
+```rm -rf .jekyll-cache```
 
 ---
 
