@@ -1,0 +1,31 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler config
+.bundle/
+vendor/
+
+# Logs
+*.log
+
+# Temporary files
+*.swp
+.DS_Store
+
+# Ruby environment normalization
+.ruby-version
+.ruby-gemset
+
+# IDE specific files
+.idea/
+.vscode/
+
+# If you're using npm or yarn
+node_modules/
+yarn-error.log
+
+# If you're using Gemfile.lock (optional, some prefer to version control it)
+# Gemfile.lock
