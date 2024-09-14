@@ -32,7 +32,8 @@ permalink           : "/people/"
                 <div><b>Jun Allard</b><br>
                 Associate Professor, 
                 Department of Mathematics, 
-                Department of Physics and Astronomy</div>
+                Department of Physics and Astronomy<br>
+                <a href="{{ site.urlfiles }}cv-allard.pdf">Curriculum Vitae</a></div>
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}brady_192px.jpg" width="192"></div>
@@ -45,17 +46,9 @@ permalink           : "/people/"
                 MSCB PhD student</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}SohyeonPark_192px.jpeg" width="192"></div>
-                <div><b>Sohyeon Park</b><br>
-                MSCB PhD student<br>
-                co-advised with <a href="https://xyushi.wixsite.com/xshi">Xaoyu Shi</a><br>
-                <a href="https://sites.google.com/uci.edu/sohyeonpark/about-me">website</a></div>
-            </div>
-            <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Jonathan Rodriguez</b><br>
-                MSCB PhD student<br>
-                Primary advisor <a href="https://ccbs.uci.edu/team/john-lowengrub/">John Lowengrub</a></div>
+                <div><b>Austin Marcus</b><br>
+                MSCB PhD student</div>
             </div>
             <!-- <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
@@ -69,6 +62,20 @@ permalink           : "/people/"
             </div>
         </div>
         <div class="row align-middle"> <!-- Row with all past people -->
+            <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}SohyeonPark_192px.jpeg" width="192"></div>
+                <div><b>Sohyeon Park</b><br>
+                PhD in MCSB 2024<br>
+                co-advised with <a href="https://xyushi.wixsite.com/xshi">Xaoyu Shi</a><br>
+                <a href="https://sites.google.com/uci.edu/sohyeonpark/about-me">website</a>
+                Subsequent position: <a href="https://www.signalingsystems.ucla.edu/">Hoffman Lab, UCLA</a></div>
+            </div>
+            <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><b>Jonathan Rodriguez</b><br>
+                PhD in MCSB, 2024<br>
+                Primary advisor <a href="https://ccbs.uci.edu/team/john-lowengrub/">John Lowengrub</a></div>
+            </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
                 <div><b>Rob Taylor</b><br>
@@ -124,7 +131,9 @@ permalink           : "/people/"
                         <li>Lorenzo Alesiani, MathBioU</li>
                         <li>Ke Xu, UCI Physics undergrad</li>
                         <li>Shannon McFadden, MathExplr</li>
-                        <li>Andrew Rusli, MathExplr</li>
+                        <li>Emily Liu, MathExplr</li>
+                        <li>Aidan Zhang, MathExplr</li>
+                        <li>Evan Park, MathExplr</li>
                     </ul>
                     </li>
                 </ul>
