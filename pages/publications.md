@@ -272,6 +272,7 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 		Allard, J.,  
 		<span class="paper-title">Models of the actin-like MreB helix in bacteria</span>,
 		MSc Thesis, Dalhousie University (2007), 
-		<a href="{{ site.urlfiles }}allard-thesis-dal2007.pdf">pdf</a>
+		<a href="{{ site.urlfiles }}allard-thesis-dal2007.pdf">pdf</a></div>
+
 	</li>
 </ul>

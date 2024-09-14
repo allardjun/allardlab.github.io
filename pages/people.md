@@ -33,7 +33,7 @@ permalink           : "/people/"
                 Associate Professor, 
                 Department of Mathematics, 
                 Department of Physics and Astronomy<br>
-                <a href="{{ site.urlfiles }}cv-allard.pdf">Curriculum Vitae</a></div>
+                <a href="{{ site.urlfiles }}allard.pdf">Curriculum Vitae</a></div>
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}brady_192px.jpg" width="192"></div>
