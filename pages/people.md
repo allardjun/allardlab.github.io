@@ -41,14 +41,21 @@ permalink           : "/people/"
                 MSCB PhD student</div>
             </div>
             <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><b>Katie Bogue</b><br>
+                Research scientist<br>
+                co-advised with <a href="https://quinlanlab.wordpress.com/">Margot Quinlan</a><br></div>
+            </div>
+            <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}jack_image0_192px.jpeg" width="192"></div>
                 <div><b>Jack Corrette</b><br>
                 MSCB PhD student</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><img class="peoplephoto" src="{{ site.urlimg }}austin_192px.jpg" width="192"></div>
                 <div><b>Austin Marcus</b><br>
-                MSCB PhD student</div>
+                MSCB PhD student<br>
+                co-advised with <a href="https://www.math.uci.edu/~cemiles/">Chris Miles</a><br></div>
             </div>
             <!-- <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
@@ -142,6 +149,10 @@ permalink           : "/people/"
         </div> <!-- Done row with all past people -->
     </div> <!-- Done column that contains all people content-->
     <!-- Photos of fun -->
+    <!-- 2024 -->
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20240723_020232726.jpg">
+    </div> 
     <!-- 2023 -->
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}PXL_20231118_212151696.jpg">
@@ -164,8 +175,10 @@ permalink           : "/people/"
     </div>
      <!-- 2022 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}IMG_4706.jpg">
+        <img src="{{ site.urlimg }}group19su.jpg">
     </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}IMG_4706.jpg">
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}PXL_20220220_232140407.jpg">
     </div> 
