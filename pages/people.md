@@ -30,10 +30,10 @@ permalink           : "/people/"
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}photojun.jpg" width="192"></div>
                 <div><b>Jun Allard</b><br>
-                Associate Professor, 
+                Professor, 
                 Department of Mathematics, 
                 Department of Physics and Astronomy<br>
-                <a href="{{ site.urlfiles }}allard.pdf">Curriculum Vitae</a></div>
+                <a href="{{ site.urlfiles }}allard-cv_2024.pdf">Curriculum Vitae</a></div>
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}brady_192px.jpg" width="192"></div>
