@@ -12,6 +12,10 @@ To compile locally,
 
 ```rm -rf .jekyll-cache```
 
+## Photo conversion
+
+```mogrify -resize 600x -path half_res full_res/*.jpg```
+
 ---
 
 Forked from the theme *Feeling Responsive* check out all the features explained in the [documentation][1] under [license][2].
