@@ -30,9 +30,10 @@ permalink           : "/people/"
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}photojun.jpg" width="192"></div>
                 <div><b>Jun Allard</b><br>
-                Associate Professor, 
+                Professor, 
                 Department of Mathematics, 
-                Department of Physics and Astronomy</div>
+                Department of Physics and Astronomy<br>
+                <a href="{{ site.urlfiles }}allard-cv_2024.pdf">Curriculum Vitae</a></div>
             </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}brady_192px.jpg" width="192"></div>
@@ -40,22 +41,21 @@ permalink           : "/people/"
                 MSCB PhD student</div>
             </div>
             <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><b>Katie Bogue</b><br>
+                Research scientist<br>
+                co-advised with <a href="https://quinlanlab.wordpress.com/">Margot Quinlan</a><br></div>
+            </div>
+            <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}jack_image0_192px.jpeg" width="192"></div>
                 <div><b>Jack Corrette</b><br>
                 MSCB PhD student</div>
             </div>
             <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}SohyeonPark_192px.jpeg" width="192"></div>
-                <div><b>Sohyeon Park</b><br>
+                <div><img class="peoplephoto" src="{{ site.urlimg }}austin_192px.jpg" width="192"></div>
+                <div><b>Austin Marcus</b><br>
                 MSCB PhD student<br>
-                co-advised with <a href="https://xyushi.wixsite.com/xshi">Xaoyu Shi</a><br>
-                <a href="https://sites.google.com/uci.edu/sohyeonpark/about-me">website</a></div>
-            </div>
-            <div class="peoplewrapper">
-                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
-                <div><b>Jonathan Rodriguez</b><br>
-                MSCB PhD student<br>
-                Primary advisor <a href="https://ccbs.uci.edu/team/john-lowengrub/">John Lowengrub</a></div>
+                co-advised with <a href="https://www.math.uci.edu/~cemiles/">Chris Miles</a><br></div>
             </div>
             <!-- <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
@@ -69,6 +69,20 @@ permalink           : "/people/"
             </div>
         </div>
         <div class="row align-middle"> <!-- Row with all past people -->
+            <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}SohyeonPark_192px.jpeg" width="192"></div>
+                <div><b>Sohyeon Park</b><br>
+                PhD in MCSB 2024<br>
+                co-advised with <a href="https://xyushi.wixsite.com/xshi">Xaoyu Shi</a><br>
+                <a href="https://sites.google.com/uci.edu/sohyeonpark/about-me">website</a>
+                Subsequent position: <a href="https://www.signalingsystems.ucla.edu/">Hoffman Lab, UCLA</a></div>
+            </div>
+            <div class="peoplewrapper">
+                <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
+                <div><b>Jonathan Rodriguez</b><br>
+                PhD in MCSB, 2024<br>
+                Primary advisor <a href="https://ccbs.uci.edu/team/john-lowengrub/">John Lowengrub</a></div>
+            </div>
             <div class="peoplewrapper">
                 <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192"></div>
                 <div><b>Rob Taylor</b><br>
@@ -124,7 +138,9 @@ permalink           : "/people/"
                         <li>Lorenzo Alesiani, MathBioU</li>
                         <li>Ke Xu, UCI Physics undergrad</li>
                         <li>Shannon McFadden, MathExplr</li>
-                        <li>Andrew Rusli, MathExplr</li>
+                        <li>Emily Liu, MathExplr</li>
+                        <li>Aidan Zhang, MathExplr</li>
+                        <li>Evan Park, MathExplr</li>
                     </ul>
                     </li>
                 </ul>
@@ -133,6 +149,25 @@ permalink           : "/people/"
         </div> <!-- Done row with all past people -->
     </div> <!-- Done column that contains all people content-->
     <!-- Photos of fun -->
+    <!-- 2024 -->
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}allardlab_and_friends2024.jpg">
+    </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20241217_034619594.jpg">
+    </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20241217_192739990~2.jpg">
+    </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20241217_192946754.PORTRAIT~2.jpg">
+    </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20241218_060911193.NIGHT~2.jpg">
+    </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}PXL_20240723_020232726.jpg">
+    </div> 
     <!-- 2023 -->
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}PXL_20231118_212151696.jpg">
@@ -155,8 +190,10 @@ permalink           : "/people/"
     </div>
      <!-- 2022 -->
     <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}IMG_4706.jpg">
+        <img src="{{ site.urlimg }}group19su.jpg">
     </div> 
+    <div class="column small-12 medium-12 large-6">
+        <img src="{{ site.urlimg }}IMG_4706.jpg">
     <div class="column small-12 medium-12 large-6">
         <img src="{{ site.urlimg }}PXL_20220220_232140407.jpg">
     </div> 

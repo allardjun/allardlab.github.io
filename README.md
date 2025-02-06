@@ -8,7 +8,13 @@ To compile locally,
 
 ```bundle exec jekyll serve```
 
+## Troubleshooting
 
+```rm -rf .jekyll-cache```
+
+## Photo conversion
+
+```mogrify -resize 600x -path half_res full_res/*.jpg```
 
 ---
 
