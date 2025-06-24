@@ -9,6 +9,12 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 
 <ul class="publist">
 	<li>
+		Berg, B., Allard, J. 
+		<span class="paper-title">Astral architecture can enhance mechanical strength of cytoskeletal networks by modulating percolation thresholds</span>,
+		Submitted 2025. 
+		Preprint on <a href="https://www.biorxiv.org/content/10.1101/2025.06.17.660175v1">BioRXiv.org</a>
+	</li>
+	<li>
 		Gu, J., Laszik, N., Miles, C.E., Allard, J.,  Downing, T.L., Read, E.L., 
 		<span class="paper-title">Scalable Inference and Identifiability of Kinetic Parameters for Transcriptional Bursting from Single Cell Data</span>,
 		Submitted 2025. 
@@ -16,8 +22,8 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 	<li>
 		Corrette, J., Li, J., Shao, H., Veerasubramanian, P., Spakowitz, A., Downing, T.L., Allard, J., 
 		<span class="paper-title">Nucleosome placement and polymer mechanics explain genomic contacts on 100kbp scales</span>,
-		Submitted 2024. 
-		<a href="https://biorxiv.org/cgi/content/short/2024.09.24.614727v1">BioRXiv.org</a>
+		Nucleic Acids Research, in press 2025. 
+		Preprint on <a href="https://biorxiv.org/cgi/content/short/2024.09.24.614727v1">BioRXiv.org</a>
 	</li>
 	<li>
 		Reddy, B., Allipeta, N., Allard, J., Gross, S.,
