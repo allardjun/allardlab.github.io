@@ -3,10 +3,10 @@ layout              : page-extrawide
 permalink           : "/people/"
 ---
 
-<!-- <style>
+<style>
     .peoplewrapper {
         display: grid;
-        grid-template-columns: 1fr 2fr; 
+        grid-template-columns: 1fr 2fr;
         align-items: center;
         grid-gap: 1em;
         row-gap: 1em;
@@ -15,9 +15,75 @@ permalink           : "/people/"
     .peoplephoto {
         float:right;
         marginleft:auto;
-        padding-left:1em;       
+        padding-left:1em;
     }
-</style> -->
+
+    /* Photo Gallery Styles */
+    .photo-gallery {
+        margin-top: 2rem;
+    }
+
+    .photo-gallery h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #333;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+    }
+
+    .photo-item.featured {
+        margin-bottom: 2rem;
+    }
+
+    .photo-item.featured img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .photo-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 6px;
+        transition: transform 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .photo-item img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Two-column wide photos */
+    .photo-item.photo-wide {
+        grid-column: span 2;
+    }
+
+    .photo-item.photo-wide img {
+        height: 250px;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 600px) {
+        .photo-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .photo-item img {
+            height: 150px;
+        }
+    }
+</style>
 
 <div class="row"> <!-- This should contain everything on this page content: both people and fun photos-->
     <div class="columns small-12 medium-12 large-6"> <!-- Column to contain all people content -->
@@ -148,107 +214,115 @@ permalink           : "/people/"
             </div>
         </div> <!-- Done row with all past people -->
     </div> <!-- Done column that contains all people content-->
-    <!-- Photos of fun -->
-    <!-- 2024 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}allardlab_and_friends2024.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20241217_034619594.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20241217_192739990~2.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20241217_192946754.PORTRAIT~2.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20241218_060911193.NIGHT~2.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20240723_020232726.jpg">
-    </div> 
-    <!-- 2023 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20231118_212151696.jpg">
-    </div> 
-     <!-- 2022 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20221212_171623459.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20221212_180556588.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20221212_195546518.jpg">
+    <!-- Photos Gallery Section -->
+    <div class="columns small-12 medium-12 large-6">
+        <!-- <h1>LAB PHOTOS</h1> -->
+
+        <!-- Photo Grid Container -->
+        <div class="photo-gallery">
+            <!-- Featured/Hero Photos (larger) -->
+            <div class="photo-item featured">
+                <img src="{{ site.urlimg }}allardlab_and_friends2024.jpg" alt="Allard Lab and Friends 2024">
+            </div>
+
+            <!-- Recent Photos Grid -->
+            <h3>2024</h3>
+            <div class="photo-grid">
+                <div class="photo-item   photo-wide">
+                    <img src="{{ site.urlimg }}PXL_20241217_034619594.jpg" alt="Lab Photo Dec 2024">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20241217_192739990~2.jpg" alt="Lab Photo Dec 2024">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20241217_192946754.PORTRAIT~2.jpg" alt="Lab Photo Dec 2024">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20241218_060911193.NIGHT~2.jpg" alt="Lab Photo Dec 2024">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20240723_020232726.jpg" alt="Lab Photo Jul 2024">
+                </div>
+            </div>
+
+            <h3>2023</h3>
+            <div class="photo-grid">
+                <div class="photo-item photo-wide">
+                    <img src="{{ site.urlimg }}PXL_20231118_212151696.jpg" alt="Lab Photo 2023">
+                </div>
+            </div>
+
+            <h3>2022</h3>
+            <div class="photo-grid">
+                <div class="photo-item  photo-wide">
+                    <img src="{{ site.urlimg }}PXL_20221212_171623459.jpg" alt="Lab Photo Dec 2022">
+                </div>
+                <div class="photo-item  photo-wide">
+                    <img src="{{ site.urlimg }}PXL_20221212_180556588.jpg" alt="Lab Photo Dec 2022">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20221212_195546518.jpg" alt="Lab Photo Dec 2022">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20221213_002818574~2.jpg" alt="Lab Photo Dec 2022">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20220220_232140407.jpg" alt="Lab Photo Feb 2022">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20220220_184131302.PORTRAIT.jpg" alt="Lab Photo Feb 2022">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20220223_052932459.NIGHT.jpg" alt="Lab Photo Feb 2022">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}PXL_20220223_022415323.NIGHT_2.jpg" alt="Lab Photo Feb 2022">
+                </div>
+            </div>
+
+            <h3>2019</h3>
+            <div class="photo-grid">
+                <div class="photo-item photo-wide">
+                    <img src="{{ site.urlimg }}group19su.jpg" alt="Group Photo Summer 2019">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}group19f.jpg" alt="Group Photo Fall 2019">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}matt2019.jpg" alt="Matt 2019">
+                </div>
+                <div class="photo-item   photo-wide">
+                    <img src="{{ site.urlimg }}img_20191126_114741.jpg" alt="Lab Photo Nov 2019">
+                </div>
+
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}sohyeon2019.jpg" alt="Sohyeon 2019">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}IMG_4706.jpg" alt="Lab Photo 2019">
+                </div>
+            </div>
+
+            <h3>Earlier Years</h3>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}20180330allardgroupphoto.jpeg" alt="Group Photo 2018">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}39273544_10156593333079694_8710688989096443904_n.jpg" alt="Lab Photo 2018">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}img_20170422_153511.jpg" alt="Lab Photo 2017">
+                </div>
+                <div class="photo-item">
+                    <img src="{{ site.urlimg }}img_0064.jpg" alt="Lab Photo 2016">
+                </div>
+                <div class="photo-item photo-wide">
+                    <img src="{{ site.urlimg }}allardlab2015largecropped512.jpeg" alt="Allard Lab 2015">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20221213_002818574~2.jpg">
-    </div>
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}sohyeon2019.jpg">
-    </div>
-     <!-- 2022 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}group19su.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}IMG_4706.jpg">
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20220220_232140407.jpg">
-    </div> 
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20220220_184131302.PORTRAIT.jpg">
-    </div>
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20220223_052932459.NIGHT.jpg">
-    </div>
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}PXL_20220223_022415323.NIGHT_2.jpg">
-    </div>
-    <!-- 2019 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}group19f.jpg" >
-    </div>
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}img_20191126_114741.jpg" >
-    </div>
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}matt2019.jpg">
-    </div>
-    <!-- 2018 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}20180330allardgroupphoto.jpeg">
-    </div>
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}39273544_10156593333079694_8710688989096443904_n.jpg">
-    </div>
-    <!-- 2017 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}img_20170422_153511.jpg" >
-    </div>
-    <!--
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}img_20170402_022106.jpg" >
-    </div>
-    -->
-    <!-- 2016 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}img_0064.jpg" >
-    </div>
-    <!-- 2015 -->
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}allardlab2015largecropped512.jpeg" >
-    </div>
-    <!-- 2014 -->
-    <!--
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}photoderekbiophys2014_390px.jpeg">
-    </div>
-    <div class="column small-12 medium-12 large-6">
-        <img src="{{ site.urlimg }}photogroup390px.jpeg">
-    </div>
-    -->
 
 </div>
 
