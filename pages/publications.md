@@ -4,6 +4,41 @@ permalink: /publications/
 homepage: false
 ---
 
+<style>
+    /* Subtle modern improvements while preserving original appearance */
+    .publist {
+        line-height: 1.6;
+    }
+
+    .publist li {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Preserve original paper-title styling, just add subtle improvements */
+    .paper-title {
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 0.3rem 0;
+    }
+
+    /* Improve link readability with subtle hover effect */
+    .publist a {
+        transition: opacity 0.2s ease;
+    }
+
+    .publist a:hover {
+        opacity: 0.8;
+    }
+
+    /* Better spacing for mobile */
+    @media (max-width: 768px) {
+        .publist li {
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
+    }
+</style>
+
 Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAAAJ&amp;hl=en">Google Scholar</a> and <a href="https://www.ncbi.nlm.nih.gov/sites/myncbi/jun.allard.1/bibliography/48587442/public/?sort=date&amp;direction= descending">PubMed</a>.
 
 
