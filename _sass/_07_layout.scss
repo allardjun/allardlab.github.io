@@ -88,6 +88,47 @@ body.video cite { color: #fff; }
     margin-top: 60px;
 }
 
+.masthead-container {
+    display: table;
+    width: 100%;
+    height: 175px;
+}
+
+.masthead-cell {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.masthead-content {
+    text-align: center;
+}
+
+.masthead-title {
+    font-size: 22.9pt;
+    font-weight: bold;
+    color: black;
+    font-family: supria-sans;
+    display: block;
+    margin-bottom: -5px;
+}
+
+.masthead-subtitle {
+    font-size: 10pt;
+    font-weight: bold;
+    color: black;
+    font-family: supria-sans;
+    display: block;
+}
+
+.masthead-description {
+    font-size: 14.9pt;
+    font-weight: bold;
+    color: black;
+    font-family: supria-sans;
+    display: block;
+}
+
 /* Masthead › small-only
 ------------------------------------------------------------------- */
 
