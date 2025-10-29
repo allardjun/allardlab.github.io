@@ -1,0 +1,31 @@
+---
+/**
+ * BlueskyTimeline — quick drop-in timeline embed.
+ * Props:
+ *  - handle: your Bluesky handle, e.g. '@yourname.bsky.social'
+ *  - theme: 'dark' | 'light'
+ *  - limit: number of posts to show
+ *
+ * This uses a small third-party script for convenience.
+ * For a zero-JS, build-time approach, replace this component with
+ * a loader that fetches posts during CI and renders static HTML.
+ */
+const { handle = '@your-handle.bsky.social', theme = 'dark', limit = 8 } = Astro.props;
+---
+<div id="bsky-feed"></div>
+<script src="https://blueskytimeline.com/widget.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // If the vendor changes API, update here
+    // @ts-ignore
+    new BlueskyTimeline({
+      handle: {handle: true} ? "{handle}" : "@your-handle.bsky.social",
+      theme: "{theme}",
+      container: "#bsky-feed",
+      limit: {limit}
+    }).render();
+  });
+</script>
+<style>
+#bsky-feed { margin-top: 1rem; }
+</style>

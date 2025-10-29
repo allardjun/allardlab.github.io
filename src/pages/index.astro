@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlueskyTimeline from "../components/BlueskyTimeline.astro";
+---
+<BaseLayout title="Allard Lab — Home" page="home">
+  <section class="hero">
+    <h1>Allard Lab</h1>
+    <p>We study mechanistic biophysics and computation, working across
+    modeling, simulation, and experiment.</p>
+  </section>
+
+  <section class="t20">
+    <h2>Updates</h2>
+    <p>Follow our latest posts on Bluesky:</p>
+    <BlueskyTimeline handle="@your-handle.bsky.social" theme="dark" limit={6} />
+  </section>
+</BaseLayout>
