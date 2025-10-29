@@ -1,0 +1,42 @@
+---
+const { title = 'Allard Lab', description = 'Allard Lab — Research in biophysics & computation', page = '' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- If you self-host supria-sans, add <link rel="preload"> here -->
+    <style is:global>@import "/src/styles/global.scss";</style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="title">Allard Lab</div>
+        <div class="subtitle">Biophysics • Computation • Systems</div>
+      </div>
+    </header>
+    <nav class="topnav">
+      <div class="container nav-inner">
+        <a href="/" aria-current={page==='home' ? 'page' : undefined}>Home</a>
+        <a href="/science" aria-current={page==='science' ? 'page' : undefined}>Science</a>
+        <a href="/people" aria-current={page==='people' ? 'page' : undefined}>People</a>
+        <a href="/publications" aria-current={page==='publications' ? 'page' : undefined}>Publications</a>
+        <a href="/software" aria-current={page==='software' ? 'page' : undefined}>Software</a>
+        <a href="/contact" aria-current={page==='contact' ? 'page' : undefined}>Contact</a>
+      </div>
+    </nav>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="b15">© {new Date().getFullYear()} Allard Lab.</p>
+        <p class="b15">Built with Astro. Theme uses the CyPu palette and dark academic aesthetic.</p>
+      </div>
+    </footer>
+  </body>
+</html>

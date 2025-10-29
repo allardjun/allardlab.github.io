@@ -1,0 +1,21 @@
+// CyPu palette + dark theme tokens
+// Source: Allard Lab style guide (CyPu palette)
+
+$navy: #1D3038;      // primary background
+$cyan: #45B29D;      // primary accent / links / hover
+$red:  #BE1E2D;      // alerts / emphasis
+$gold: #FEEB7C;      // info highlights
+$text-light: #E4E4E4;
+$white: #FFFFFF;
+
+:root {
+  --color-bg: #1D3038;
+  --color-text: #E4E4E4;
+  --color-accent: #45B29D;
+  --color-accent-contrast: #1D3038;
+  --color-link: #45B29D;
+  --color-link-hover: #FEEB7C;
+  --color-danger: #BE1E2D;
+  --color-highlight: #FEEB7C;
+}
+
