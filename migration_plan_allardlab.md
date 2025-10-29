@@ -32,57 +32,69 @@
 5. **Important:** Verify custom domain `www.allardlab.com` is configured in GitHub repo settings and add `CNAME` file to `/public/` directory.
 6. Test that `site` variable is available in Astro templates for image paths (replacement for Jekyll's `{{ site.urlimg }}`).
 
-## Phase 3 — Component development & theming
+## Phase 3 — Component development & theming ✅ COMPLETE
 1. **Base styles** (already in `src/styles/global.scss`):
    - Color palette in `src/styles/_colors.scss` ✓
    - Link/hover states using Cyan (`#45B29D`) and Gold (`#FEEB7C`) ✓
    - Masthead as white with bold titles ✓
-2. **Build custom components:**
-   - `.peoplewrapper` — CSS Grid with `grid-template-columns: 1fr 2fr`, centered alignment, 1em gap.
-   - Photo gallery grid — responsive columns (3-4 on desktop, 2 on tablet, 1 on mobile) with hover effects.
-   - `.paper-title` styling for publication list items.
-   - Extract inline styles from science.md into scoped component styles or global.scss.
-3. **Add missing utility classes:**
-   - Additional margin utilities: `.t40`-`.t90`, `.l15`, `.r15`
-   - Padding utilities: `.pl20`, `.pr5`, `.pr10`, `.pr20`
-   - Responsive helpers as needed.
+2. **Build custom components:** ✓
+   - `.peoplewrapper` — CSS Grid with `grid-template-columns: 1fr 2fr`, centered alignment, 1em gap. ✓
+   - Photo gallery grid — responsive columns (3-4 on desktop, 2 on tablet, 1 on mobile) with hover effects. ✓
+   - `.paper-title` styling for publication list items. ✓
+   - `.embeddedright`/`.embeddedleft` for Bluesky embeds extracted from science.md. ✓
+3. **Add missing utility classes:** ✓
+   - Additional margin utilities: `.t40`-`.t90`, `.l15`, `.r15` ✓
+   - Padding utilities: `.pl20`, `.pr5`, `.pr10`, `.pr20` ✓
+   - All components use CSS variables from CyPu palette ✓
+4. **Font configuration:** ✓
+   - Adobe Typekit link added for supria-sans font ✓
+   - sass-embedded dependency installed ✓
 
-## Phase 4 — Content migration
+## Phase 4 — Content migration ✅ COMPLETE
 Migrate content from Jekyll Markdown to Astro pages (all located in `pages/` directory):
 
-1. **Home** (`pages/pages-root-folder/index.md`) → `src/pages/index.astro`
-   - Extract mission statement and intro text.
-   - Add Bluesky feed component (see Phase 5).
-   - Optional: Add link tiles to Science/Publications/People.
+1. **Home** (`pages/pages-root-folder/index.md`) → `src/pages/index.astro` ✓
+   - Mission statement and intro text migrated ✓
+   - Group photo included ✓
+   - Links to UC Irvine affiliations ✓
+   - Graduate program information ✓
 
-2. **Science** (`pages/science.md`) → `src/pages/science.astro`
-   - Migrate research overview text.
-   - Replace inline Bluesky embeds with BlueskyTimeline component.
-   - Extract embedded `<style>` blocks to component/global styles.
-   - Handle Liquid templating variables (replace `{{ site.urlimg }}` with Astro equivalents).
+2. **Science** (`pages/science.md`) → `src/pages/science.astro` ✓
+   - Research overview text migrated ✓
+   - Bluesky embeds preserved (3 posts with embed script) ✓
+   - Inline `<style>` blocks removed (styles in global.scss) ✓
+   - Liquid variables replaced (`{{ site.urlimg }}` → `/images/`) ✓
 
-3. **People** (`pages/people.md`) → `src/pages/people.astro`
-   - Use `.peoplewrapper` grid component for team bios.
-   - Implement photo gallery with responsive grid.
-   - Ensure all images have descriptive `alt` text.
-   - Keep names as `<h2>` for anchorability.
+3. **People** (`pages/people.md`) → `src/pages/people.astro` ✓
+   - `.peoplewrapper` grid component used for team bios ✓
+   - Photo gallery with responsive grid (2024, 2023, 2022, 2019, Earlier Years) ✓
+   - All images have descriptive `alt` text ✓
+   - Current members: Jun, Brady, Katie, Jack, Austin ✓
+   - Past members with subsequent positions ✓
+   - Two-column layout: people list + photos ✓
 
-4. **Publications** (`pages/publications.md`) → `src/pages/publications.astro`
-   - Migrate chronological citation list.
-   - Group by year with headings.
-   - Add compact link clusters: `[PDF] [PubMed] [Code]`.
-   - Style with `.paper-title` spans.
+4. **Publications** (`pages/publications.md`) → `src/pages/publications.astro` ✓
+   - Complete chronological citation list (50+ papers) ✓
+   - Links to Google Scholar and PubMed ✓
+   - Individual paper links (BioRXiv, PubMed, journals) ✓
+   - `.paper-title` styling applied ✓
+   - PhD and MSc theses included ✓
 
-5. **Software** (`pages/software.md`) → `src/pages/software.astro`
-   - **Replace GitHub Cards widget** with one of:
-     - Option A: Direct links to GitHub repos.
-     - Option B: Use GitHub API at build time to fetch repo metadata.
-   - Add one-line descriptions for each repo.
+5. **Software** (`pages/software.md`) → `src/pages/software.astro` ✓
+   - GitHub Cards widget replaced with direct links (Option A) ✓
+   - 6 repositories with descriptions ✓
+   - Clean, centered layout ✓
 
-6. **Contact** (`pages/contact.md`) → `src/pages/contact.astro`
-   - Two-column layout (text + campus photos).
-   - Contact info and address.
-   - Copy campus photos to `/public/images/`.
+6. **Contact** (`pages/contact.md`) → `src/pages/contact.astro` ✓
+   - Two-column layout (text + campus photos) ✓
+   - Email, LinkedIn, GitHub links ✓
+   - Office locations and mailing address ✓
+   - UCI campus photos (3 images) ✓
+   - Sheri Rowland building note ✓
+
+7. **Asset migration:** ✓
+   - 47 images copied to `/public/images/` ✓
+   - 3 PDF files copied to `/public/files/` (CV and theses) ✓
 
 ## Phase 5 — Bluesky feed integration
 **Recommended approach: Option A (turnkey widget for initial launch)**
