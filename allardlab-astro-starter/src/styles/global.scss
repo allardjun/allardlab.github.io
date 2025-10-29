@@ -96,8 +96,181 @@ footer a {
   .grid.cols-2 { grid-template-columns: 1fr; }
 }
 
-/* Utility classes */
-.t10 { margin-top: 10px; } .t20 { margin-top: 20px; } .t30 { margin-top: 30px; }
-.b15 { margin-bottom: 15px; } .b30 { margin-bottom: 30px; } .b60 { margin-bottom: 60px; }
+/* ===== People Page Components ===== */
+.peoplewrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1em;
+  row-gap: 1em;
+  padding-bottom: 1em;
+}
 
+.peoplephoto {
+  float: right;
+  margin-left: auto;
+  padding-left: 1em;
+}
+
+@media (max-width: 768px) {
+  .peoplewrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .peoplephoto {
+    float: none;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+}
+
+/* ===== Photo Gallery Components ===== */
+.photo-gallery {
+  margin-top: 2rem;
+}
+
+.photo-gallery h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.photo-item.featured {
+  margin-bottom: 2rem;
+}
+
+.photo-item.featured img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.photo-item img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.photo-item.photo-wide {
+  grid-column: span 2;
+}
+
+.photo-item.photo-wide img {
+  height: 250px;
+}
+
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+  }
+  .photo-item img {
+    height: 150px;
+  }
+  .photo-item.photo-wide {
+    grid-column: span 1;
+  }
+}
+
+/* ===== Publications Page Components ===== */
+.publist {
+  line-height: 1.6;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.publist li {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+.paper-title {
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0.3rem 0;
+  color: var(--color-text);
+}
+
+.publist a {
+  transition: opacity 0.2s ease;
+}
+
+.publist a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .publist li {
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Science Page Components ===== */
+.embeddedright {
+  float: right;
+  margin: 20px;
+}
+
+.embeddedleft {
+  float: left;
+  margin: 20px;
+}
+
+@media (max-width: 500px) {
+  .embeddedright,
+  .embeddedleft {
+    float: none;
+    margin: 20px auto;
+    text-align: center;
+  }
+}
+
+/* ===== Utility classes ===== */
+/* Margin top */
+.t10 { margin-top: 10px; }
+.t20 { margin-top: 20px; }
+.t30 { margin-top: 30px; }
+.t40 { margin-top: 40px; }
+.t50 { margin-top: 50px; }
+.t60 { margin-top: 60px; }
+.t70 { margin-top: 70px; }
+.t80 { margin-top: 80px; }
+.t90 { margin-top: 90px; }
+
+/* Margin bottom */
+.b15 { margin-bottom: 15px; }
+.b30 { margin-bottom: 30px; }
+.b60 { margin-bottom: 60px; }
+
+/* Margin left/right */
+.l15 { margin-left: 15px; }
+.r15 { margin-right: 15px; }
+
+/* Padding utilities */
+.pl20 { padding-left: 20px; }
+.pr5 { padding-right: 5px; }
+.pr10 { padding-right: 10px; }
+.pr20 { padding-right: 20px; }
+
+/* Image utilities */
 img.responsive { max-width: 100%; height: auto; display: block; }
