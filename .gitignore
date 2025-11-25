@@ -24,3 +24,4 @@ vendor/
 
 # If you're using Gemfile.lock (optional, some prefer to version control it)
 # Gemfile.lock
+node_modules

@@ -43,6 +43,12 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 
 
 <ul class="publist">
+
+	<li> Bogue, K., Christian, B., Quinlan, M. E., Allard, , 
+<span class="paper-title">Impact of N-terminal dimerization of the formin homology domain 1 on polymer dynamics and actin assembly.</span>
+		Submitted 2025. 
+		Preprint on <a href="https://www.biorxiv.org/content/10.1101/2025.08.28.672930v1">BioRXiv.org</a>
+	</li>
 	<li>
 		Allard, J. 
 		<span class="paper-title">Improvement in model flexibility reveals a minimal signalling pathway that explains T cell responses to pulsatile stimuli</span>,
@@ -58,7 +64,7 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 	<li>
 		Gu, J., Laszik, N., Miles, C.E., Allard, J.,  Downing, T.L., Read, E.L., 
 		<span class="paper-title">Scalable Inference and Identifiability of Kinetic Parameters for Transcriptional Bursting from Single Cell Data</span>,
-		Submitted 2025. 
+		Bioinformatics (2025). 
 	</li>
 	<li>
 		Corrette, J., Li, J., Shao, H., Veerasubramanian, P., Spakowitz, A., Downing, T.L., Allard, J., 
