@@ -43,7 +43,16 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 
 
 <ul class="publist">
-
+	<li>
+		Laszik, N., Trinh, A., Morival, J.L.P., Aleman, E., Shao, H., Yin, H., Allard, J., Ding, F., Read, E.L., Downing, T.D., 
+		<span class="paper-title">DNMT3s and TETs adjust CpG methylation canyon width to regulate gene expression and differentiation.</span>
+		Submitted 2026
+	</li>
+	<li> 
+		Allard and Dushek,
+		<span class="paper-title">Tethered signaling molecules</span>
+		Annual Review in Biophysics (2026). 
+	</li>
 	<li> Bogue, K., Christian, B., Quinlan, M. E., Allard, , 
 <span class="paper-title">Impact of N-terminal dimerization of the formin homology domain 1 on polymer dynamics and actin assembly.</span>
 		Submitted 2025. 
