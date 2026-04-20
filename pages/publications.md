@@ -67,7 +67,7 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 	<li>
 		Berg, B., Allard, J. 
 		<span class="paper-title">Astral architecture can enhance mechanical strength of cytoskeletal networks by modulating percolation thresholds</span>,
-		Submitted 2025. 
+		Biophysical Journal (2026). 
 		Preprint on <a href="https://www.biorxiv.org/content/10.1101/2025.06.17.660175v1">BioRXiv.org</a>
 	</li>
 	<li>
