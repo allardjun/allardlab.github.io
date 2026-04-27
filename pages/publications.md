@@ -55,7 +55,7 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 	</li>
 	<li> Bogue, K., Christian, B., Quinlan, M. E., Allard, , 
 <span class="paper-title">Impact of N-terminal dimerization of the formin homology domain 1 on polymer dynamics and actin assembly.</span>
-		Submitted 2025. 
+		Biophysical Journal, in press 2026.
 		Preprint on <a href="https://www.biorxiv.org/content/10.1101/2025.11.21.689827v1">BioRXiv.org</a>
 	</li>
 	<li>
