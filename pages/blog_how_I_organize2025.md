@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Blog: How I organize science projects in 2025"
+permalink: /blog_250206/
+---
+
 # How I organize science projects in 2025 by Jun Allard
 
 ... or, "How to be a Scientist in these easy steps!" 
