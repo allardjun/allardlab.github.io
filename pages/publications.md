@@ -61,7 +61,7 @@ Publication list on <a href="http://scholar.google.com/citations?user=tAXVWbUAAA
 	<li>
 		Allard, J. 
 		<span class="paper-title">Improvement in model flexibility reveals a minimal signalling pathway that explains T cell responses to pulsatile stimuli</span>,
-		Submitted 2025. 
+		NPJ Systems Biology and its Applications, in press 2026. 
 		Preprint on <a href="https://www.biorxiv.org/content/10.1101/2025.08.28.672930v1">BioRXiv.org</a>
 	</li>
 	<li>
