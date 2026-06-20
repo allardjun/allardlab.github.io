@@ -81,7 +81,7 @@ Scientific communication:
 ... More accurately, it looks like this:
 
 <div style="text-align: center;">
-  <img src="figTimeline.png" alt="Timeline" width="400"/>
+  <img src="{{ site.urlimg }}figTimeline.png" alt="Timeline" width="400"/>
 </div>
 
 ## An idea or cool hypothesis, literature
@@ -99,7 +99,7 @@ Literature. Papers on the internet.
 Create a tag/Folder in ReadCube, and use the browser plugin to tag papers as I find them:
 
 <div style="text-align: center;">
-  <img src="figliterature.png" alt="Bibliography management" width="500"/>
+  <img src="{{ site.urlimg }}figliterature.png" alt="Bibliography management" width="500"/>
 </div>
 And then, get both citations and sketches into a tex repo!
 My [prototype latex repo __JunsLatexRepository__](JunsLatexRepository) with a fictitious project called JeanJacket.
@@ -182,7 +182,7 @@ You can get them to all have a different specified color theme using `code-works
 A surprising amount of time is spent "tabbing" to the latex repo window, where I'm constantly taking notes, recording what model equations I'm currently using, etc.
  
 <div style="text-align: center;">
-  <img src="figThreeWindows.png" alt="Three VSCode windows" width="500"/>
+  <img src="{{ site.urlimg }}figThreeWindows.png" alt="Three VSCode windows" width="500"/>
 </div>
 
 How often should you `git commit`? How to quickly write useful commit messages?
@@ -286,7 +286,7 @@ Note this is an opinionated, careful, thought-provoking process in itself. Then,
 It feels amazing to check off something in the dashboard.
 
 <div style="text-align: center;">
-    <img src="figDashboard.png" alt="Revision dashboard" width="400"/>
+    <img src="{{ site.urlimg }}figDashboard.png" alt="Revision dashboard" width="400"/>
 </div>
 
 ## Bubbly bottle signing event
@@ -294,7 +294,7 @@ It feels amazing to check off something in the dashboard.
 When it gets accepted, the first author signs a bottle of bubbly:
 
 <div style="text-align: center;">
-    <img src="figBottles.png" alt="Bubbly" width="400"/>
+    <img src="{{ site.urlimg }}figBottles.png" alt="Bubbly" width="400"/>
 </div>
 
 ## Closing thoughts
