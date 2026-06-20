@@ -59,13 +59,5 @@ We’re always interested in hearing from prospective graduate students and post
 
 </section>
 
-
-  <!--
   </div>
-  <div class="columns small-12 medium-12 large-5" style="text-align:center;">
-    <a class="twitter-timeline" data-width="250" data-height="800" data-dnt="true" data-theme="dark" href="https://twitter.com/allardlab?ref_src=twsrc%5Etfw" data-chrome="transparent noscrollbar">Tweets by allardlab</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-
-</div> 
- -->
-
+</div>

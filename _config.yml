@@ -52,10 +52,8 @@ logo: "frontpage_title.png"
 
 # Plugins
 plugins:
-    - jekyll-asciidoc
     - jekyll-gist
     - jekyll-paginate
-    #- jekyll-twitter-plugin #added by jun
 
 
 #       ____              _             __  _
@@ -229,24 +227,3 @@ sass:
 
 
 
-#     ___              _     __           __
-#    /   |  __________(_)___/ /___  _____/ /_____  _____
-#   / /| | / ___/ ___/ / __  / __ \/ ___/ __/ __ \/ ___/
-#  / ___ |(__  ) /__/ / /_/ / /_/ / /__/ /_/ /_/ / /
-# /_/  |_/____/\___/_/\__,_/\____/\___/\__/\____/_/
-#
-#  Asciidoctor is a fast text processor and publishing toolchain for converting
-#  AsciiDoc content to HTML5, DocBook 5 (or 4.5) and other formats.
-#
-#  https://github.com/asciidoctor/jekyll-asciidoc
-#  https://github.com/asciidoctor
-#
-#
-
-asciidoctor-enabled: false
-asciidoctor:
-  description: 
-  attributes:
-    source-highlighter: coderay
-    coderay-css: style
-    icons: font

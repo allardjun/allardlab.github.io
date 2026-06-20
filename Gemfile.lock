@@ -3,8 +3,6 @@ GEM
   specs:
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
-    asciidoctor (1.5.8)
-    coderay (1.1.1)
     colorator (1.1.0)
     concurrent-ruby (1.2.3)
     em-websocket (0.5.3)
@@ -52,15 +50,11 @@ GEM
       safe_yaml (~> 1.0)
       terminal-table (>= 1.8, < 4.0)
       webrick (~> 1.7)
-    jekyll-asciidoc (3.0.0)
-      asciidoctor (>= 1.5.0)
-      jekyll (>= 3.0.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
-    jekyll-twitter-plugin (2.1.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.4.0)
@@ -102,13 +96,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  asciidoctor (~> 1.5.4)
-  coderay (= 1.1.1)
   jekyll
-  jekyll-asciidoc
   jekyll-gist
   jekyll-paginate
-  jekyll-twitter-plugin
   webrick (~> 1.7)
 
 RUBY VERSION
