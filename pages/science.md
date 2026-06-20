@@ -3,25 +3,6 @@ layout              : page
 permalink           : "/science/"
 ---
 
-<style>
-    .embeddedright{
-        float:right;
-        margin:20px;
-    }
-    .embeddedleft{
-        float:left;
-        margin:20px;
-    }
-    @media (max-width: 500px) {
-        .embeddedright{
-            float:none;
-        }
-        .embeddedleft{
-            float:none;
-        }
-    }
-</style>
-
 <div class="row">
 <div class="columns small-12">
 

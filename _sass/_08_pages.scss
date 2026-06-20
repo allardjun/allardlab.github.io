@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* TOC – Page-specific styles
+   Rules that used to live in <style> blocks inside individual page
+   markdown files. Centralised here so all CSS is in _sass/.
+
+- People page (and people roster on any page)
+- Science page (floated embeds)
+- Publications page (publist)
+*/
+
+
+/* People
+------------------------------------------------------------------- */
+
+.peoplewrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    grid-gap: 1em;
+    row-gap: 1em;
+    padding-bottom: 1em;
+}
+
+.peoplephoto {
+    float: right;
+    margin-left: auto;
+    padding-left: 1em;
+}
+
+.photo-gallery {
+    margin-top: 2rem;
+}
+
+.photo-gallery h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.photo-item.featured {
+    margin-bottom: 2rem;
+}
+
+.photo-item.featured img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-item img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.photo-item.photo-wide {
+    grid-column: span 2;
+}
+
+.photo-item.photo-wide img {
+    height: 250px;
+}
+
+@media (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .photo-item img {
+        height: 150px;
+    }
+}
+
+
+/* Science
+------------------------------------------------------------------- */
+
+.embeddedright {
+    float: right;
+    margin: 20px;
+}
+
+.embeddedleft {
+    float: left;
+    margin: 20px;
+}
+
+@media (max-width: 500px) {
+    .embeddedright,
+    .embeddedleft {
+        float: none;
+    }
+}
+
+
+/* Publications
+------------------------------------------------------------------- */
+
+.publist {
+    line-height: 1.6;
+}
+
+.publist li {
+    margin-bottom: 1.5rem;
+}
+
+.paper-title {
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0.3rem 0;
+}
+
+.publist a {
+    transition: opacity 0.2s ease;
+}
+
+.publist a:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .publist li {
+        margin-bottom: 1.2rem;
+        font-size: 0.95rem;
+    }
+}
