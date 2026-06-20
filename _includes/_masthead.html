@@ -8,10 +8,9 @@ page.header.background-color == NULL and page.header.title == NULL %}
 				<div class="masthead-cell">
 					<div class="masthead-content">
 						<a href="{{ '/' | absolute_url }}" title="{{ site.title }}">
-							<!--<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }}">-->
-							<span class="masthead-title">ALLARD LAB @ UC IRVINE</span>
-							<span class="masthead-subtitle">FOR MATHEMATICAL AND COMPUTATIONAL MODELING OF</span>
-							<span class="masthead-description">CELL	AND BIOMOLECULAR MECHANICS</span>
+							<span class="masthead-title">{{ site.masthead.title }}</span>
+							<span class="masthead-subtitle">{{ site.masthead.subtitle }}</span>
+							<span class="masthead-description">{{ site.masthead.description }}</span>
 						</a>
 					</div>
 				</div>

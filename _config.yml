@@ -16,6 +16,13 @@ slogan: 'Allard Lab for Mathematical and Computational Modeling of Cell and Biom
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
 description: 'Jun Allard - Mathematical Biology, Biophysics Cell and Molecular Mechanics @ University of California Irvine'
 
+# Masthead text rendered on every page (see _includes/_masthead.html).
+# Three stacked lines: a large title, a small subtitle, a medium description.
+masthead:
+    title: 'ALLARD LAB @ UC IRVINE'
+    subtitle: 'FOR MATHEMATICAL AND COMPUTATIONAL MODELING OF'
+    description: 'CELL AND BIOMOLECULAR MECHANICS'
+
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
 credits: '<p>Created with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on the <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a> theme</p>'
 
