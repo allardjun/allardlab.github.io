@@ -1,163 +1,41 @@
-# Website Improvement Recommendations
+# Website Improvement TODO
 
-## Overview
-Analysis of index.md, publications.md, and headers.md for best practices, mobile compatibility, and aesthetic improvements.
+Phase 1 (refactor) is complete on branch `refactor-and-ui-overhaul`. Open visible-change work is consolidated into Phase 2 of [`PLAN.md`](PLAN.md). The items below are the open user-facing changes; cross-reference Phase 2 of `PLAN.md` for the structured rollout.
 
----
+## Home page (`index.md`)
 
-## 1. INDEX.MD - Home Page
+- Responsive image handling on `PXL_20230221_052352091~2.jpg` (srcset, sizes, aspect ratio, object-fit).
+- Add a clear value-proposition line above the fold and CTAs to key pages (Publications, People, open positions).
+- Visual hierarchy and visible separators between sections.
 
-### Current Issues
-- No responsive image handling
-- Commented-out Twitter timeline taking up space
-- Missing mobile-first design
-- No visual hierarchy or modern styling
-- Single column layout with no visual interest
+## Publications page (`publications.md`)
 
-### Recommended Improvements
+- Migrate the hand-maintained `<ul class="publist">` into structured `_data/publications.yml`.
+- Group entries by year with sticky year headers.
+- Style preprints vs. journal papers distinctly.
+- Client-side year/keyword filter.
+- Highlight recent / featured publications above the fold.
 
-#### High Priority
-- [ ] **Add responsive image handling**
-  - Implement `srcset` and `sizes` attributes
-  - Add proper aspect ratio and object-fit
-  - Optimize for mobile viewing
+## People page (`people.md`)
 
-- [ ] **Remove dead code**
-  - Delete commented-out Twitter timeline section
-  - Clean up unused HTML structure
+- Migrate the hand-maintained list to `_data/people.yml` with `current`, `photo`, `bio`, `links`.
+- Real `alt` text on every photo; styled initials avatar when no photo exists (drop favicon placeholders).
+- Hover state on people cards.
 
-- [ ] **Add modern CSS styling**
-  - Implement grid/flexbox layout
-  - Add proper typography hierarchy
-  - Include hover effects and transitions
+## Software page (`software.md`)
 
-#### Medium Priority
-- [ ] **Improve mobile layout**
-  - Ensure text is readable on small screens
-  - Add proper spacing and margins
-  - Test on various device sizes
+- Replace the brittle `cdn.jsdelivr.net/github-cards` widget with static cards rendered from `_data/software.yml` (or built at deploy time from the GitHub API). Restyle to match dark theme.
 
-- [ ] **Add call-to-action elements**
-  - Highlight grad student opportunities
-  - Add contact/collaboration buttons
-  - Link to key pages (publications, people)
+## Science page (`science.md`)
 
-- [ ] **Enhanced visual hierarchy**
-  - Better heading structure
-  - Improved paragraph spacing
-  - Visual separators between sections
+- Add an H1 (page front matter currently has no `title:`, so the layout's `{{ page.title }}` renders blank).
+- Break long justified paragraphs into shorter sections with subheadings.
+- Lazy-load or fallback for the Bluesky embed.
 
----
+## Cross-page
 
-## 2. PUBLICATIONS.MD - Publications Page
-
-### Current Issues
-- No CSS styling for publication list
-- Poor typography and hierarchy
-- No responsive design
-- Links and formatting inconsistent
-- No search/filter capability
-- Very long single column layout
-- Inconsistent citation formatting
-
-### Recommended Improvements
-
-#### High Priority
-- [ ] **Add modern CSS styling**
-  - Style the `.publist` class with proper spacing
-  - Improve typography for readability
-  - Add visual separation between entries
-
-- [ ] **Implement year-based grouping**
-  - Group publications by year with headers
-  - Add visual separators between years
-  - Implement collapsible sections for older papers
-
-- [ ] **Responsive grid layout**
-  - Two-column layout on desktop
-  - Single column on mobile
-  - Proper spacing and alignment
-
-#### Medium Priority
-- [ ] **Improve typography and hierarchy**
-  - Style paper titles differently (larger, bold)
-  - Consistent author formatting
-  - Better link styling and hover effects
-
-- [ ] **Enhanced publication types**
-  - Different styling for journal vs preprint
-  - Add publication type badges/tags
-  - Highlight recent/featured publications
-
-- [ ] **Add functionality**
-  - Search/filter by year or keyword
-  - Export to BibTeX option
-  - Links to PDF where available
-
-#### Low Priority
-- [ ] **Accessibility improvements**
-  - Better screen reader support
-  - Keyboard navigation
-  - ARIA labels for links
-
----
-
-## 3. HEADERS.MD - Headers Demo Page
-
-### Current Status
-- This appears to be leftover demo page from Jekyll theme
-- Contains theme documentation, not lab content
-- Takes up navigation space unnecessarily
-
-### Recommendation
-- [ ] **REMOVE ENTIRELY**
-  - Delete the file `pages/headers.md`
-  - Remove from navigation if present
-  - This is theme documentation, not relevant to lab website
-
----
-
-## 4. Cross-Page Consistency
-
-### Recommended Standards
-- [ ] **Consistent CSS framework**
-  - Use same grid system across all pages
-  - Standardize spacing and typography
-  - Implement consistent color scheme
-
-- [ ] **Mobile-first approach**
-  - Design for mobile, enhance for desktop
-  - Ensure all interactions work on touch devices
-  - Test across different screen sizes
-
-- [ ] **Performance optimization**
-  - Optimize images for web
-  - Minimize CSS and JavaScript
-  - Implement lazy loading where appropriate
-
----
-
-## Implementation Priority
-
-### Phase 1 (Quick Wins)
-1. Remove headers.md page
-2. Clean up dead code in index.md
-3. Add basic CSS styling to publications.md
-
-### Phase 2 (Major Improvements)
-1. Redesign index.md with responsive layout
-2. Implement year-based grouping for publications
-3. Add modern styling across all pages
-
-### Phase 3 (Enhancements)
-1. Add search/filter functionality
-2. Implement advanced responsive features
-3. Performance optimization
-
----
-
-## Notes
-- Follow the design patterns established in people.md
-- Maintain compatibility with Jekyll and GitHub Pages
-- Test on multiple devices and browsers
-- Consider accessibility requirements throughout
+- Mobile-first audit at 375 / 768 / 1024 / 1440 widths.
+- Image optimisation: convert large jpg/png to webp with jpg fallback via `<picture>`; add `loading="lazy"`.
+- Accessibility pass: axe / Lighthouse, alt text everywhere, ARIA labels on icons and breadcrumb, visible focus rings, no color-only state.
+- CI: GitHub Action that runs `bundle exec jekyll build` on every PR.
+- Decide on the Foundation 5 path forward (keep / replace grid with CSS Grid / full rewrite) — Phase 2 item 7 in `PLAN.md`.

@@ -135,16 +135,21 @@ The styling system is organized in a modular SCSS architecture:
    - Footer and subfooter
    - Breadcrumb navigation
    - Utility margin/padding classes
-   - Custom grid layouts (e.g., `.peoplewrapper`)
 
-6. **`_sass/_06_typography.scss`**
+6. **`_sass/_08_pages.scss`**
+   - Page-scoped styles centralised from former `<style>` blocks in `pages/*.md`
+   - People grid (`.peoplewrapper`, `.peoplephoto`, photo gallery)
+   - Science page floats (`.embeddedright`, `.embeddedleft`)
+   - Publications list (`.publist`, `.paper-title`)
+
+7. **`_sass/_06_typography.scss`**
    - Typography implementation
    - Text styling classes
 
-7. **`_sass/_09_elements.scss`**
+8. **`_sass/_09_elements.scss`**
    - HTML element base styles
 
-8. **`_sass/_11_syntax-highlighting.scss`**
+9. **`_sass/_11_syntax-highlighting.scss`**
    - Code block syntax highlighting
 
 ## Foundation Framework
@@ -170,7 +175,7 @@ The site adapts to different screen sizes with these masthead adjustments:
 
 ### People Grid
 
-Defined in `_sass/_07_layout.scss` (lines 406-418):
+Defined in `_sass/_08_pages.scss`:
 
 ```scss
 .peoplewrapper {
@@ -198,9 +203,10 @@ Margin and padding utilities defined in `_sass/_07_layout.scss`:
 
 1. **Colors**: Add new color variables to `_sass/_01_settings_colors.scss`
 2. **Typography**: Modify font settings in `_sass/_02_settings_typography.scss`
-3. **Layout Components**: Add to `_sass/_07_layout.scss`
-4. **Use Variables**: Always reference SCSS variables rather than hardcoding colors
-5. **Follow Naming**: Use descriptive variable names following existing patterns
+3. **Shared layout**: Add to `_sass/_07_layout.scss`
+4. **Page-scoped rules**: Add to `_sass/_08_pages.scss` — do not write `<style>` blocks inside `pages/*.md`
+5. **Use Variables**: Always reference SCSS variables rather than hardcoding colors
+6. **Follow Naming**: Use descriptive variable names following existing patterns
 
 ### Maintaining Brand Consistency
 
