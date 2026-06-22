@@ -4,6 +4,7 @@ format: post
 ---
 <main class="container stack" style="margin-block: var(--space-12);">
 	<article class="stack" itemscope itemtype="http://schema.org/Article">
+		{% if page.image.title or page.subheadline or page.title %}
 		<header>
 			{% if page.image.title %}
 			<figure>
@@ -21,11 +22,14 @@ format: post
 			</figure>
 			{% endif %}
 
+			{% if page.subheadline or page.title %}
 			<div itemprop="name">
 				{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
-				<h1>{{ page.title }}</h1>
+				{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
 			</div>
+			{% endif %}
 		</header>
+		{% endif %}
 
 		{% if page.teaser %}
 		<p class="teaser" itemprop="description">
