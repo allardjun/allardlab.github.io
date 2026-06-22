@@ -62,11 +62,14 @@
     --space-16: 4rem;
     --space-20: 5rem;
 
-    /* Containers */
-    --container-narrow: 38rem; /* ~608px */
-    --container:        56rem; /* ~896px */
-    --container-wide:   72rem; /* ~1152px */
-    --container-full:   90rem; /* ~1440px */
+    /* Containers
+       Tuned to be a touch wider than the old Foundation 12-col grid
+       (rows topped out at 62.5rem ≈ 1000px). Modern reading widths
+       favour 65–80ch for body text, more for two-col layouts. */
+    --container-narrow: 36rem; /* ~576px — single column reading */
+    --container:        48rem; /* ~768px — default page */
+    --container-wide:   64rem; /* ~1024px — wider single column with images */
+    --container-full:   80rem; /* ~1280px — two-column layouts */
 
     /* Radius + elevation */
     --radius-sm: 0.25rem;
