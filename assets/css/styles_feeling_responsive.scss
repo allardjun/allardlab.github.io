@@ -41,3 +41,9 @@ sitemap:
 @import "08_pages.scss";
 @import "09_elements.scss";
 @import "11_syntax-highlighting.scss";
+
+// Modern layout layer — design tokens + Grid/Flex primitives.
+// These coexist with the Foundation layer during the migration off
+// the 12-column grid (PLAN.md Phase 2 Option B).
+@import "12_tokens.scss";
+@import "13_layout_modern.scss";

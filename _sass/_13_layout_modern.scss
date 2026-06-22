@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* Modern layout primitives
+
+   A small set of composable utilities to replace the Foundation
+   12-column grid + offset system. All use modern CSS (Grid, Flexbox,
+   logical properties) and consume the design tokens in _12_tokens.scss.
+
+   Breakpoints (mobile-first):
+     tablet:  min-width 40em  (~640px)
+     desktop: min-width 64em  (~1024px)
+
+   Primitives:
+     .container, .container-narrow, .container-wide, .container-full
+                                — max-width centered wrapper
+     .stack, .stack-sm, .stack-lg
+                                — vertical flow with gap between children
+     .cluster                   — flex row that wraps, gap between items
+     .grid                      — display:grid with default gap
+     .grid-2, .grid-3, .grid-auto-fit
+                                — common grid templates, responsive
+     .split-7-5, .split-2-1, .split-1-2, .split-1-1
+                                — two-column splits (numbers are fractions),
+                                   stack on mobile
+     .text-justify, .text-center, .text-right
+                                — alignment utilities so pages don't need inline styles
+     .visually-hidden           — screen-reader-only content
+*/
+
+
+/* Containers
+------------------------------------------------------------------- */
+
+.container,
+.container-narrow,
+.container-wide,
+.container-full {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+}
+
+.container        { max-width: var(--container); }
+.container-narrow { max-width: var(--container-narrow); }
+.container-wide   { max-width: var(--container-wide); }
+.container-full   { max-width: var(--container-full); }
+
+@media (min-width: 40em) {
+    .container,
+    .container-narrow,
+    .container-wide,
+    .container-full {
+        padding-inline: var(--space-6);
+    }
+}
+
+
+/* Stack — vertical rhythm
+------------------------------------------------------------------- */
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.stack-sm { gap: var(--space-3); }
+.stack-lg { gap: var(--space-10); }
+
+
+/* Cluster — horizontal flow that wraps
+------------------------------------------------------------------- */
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    align-items: center;
+}
+
+
+/* Grid
+------------------------------------------------------------------- */
+
+.grid {
+    display: grid;
+    gap: var(--space-6);
+}
+
+.grid-2 {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: 1fr;
+}
+
+.grid-3 {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: 1fr;
+}
+
+.grid-auto-fit {
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+@media (min-width: 40em) {
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 64em) {
+    .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+
+/* Splits — two-column with fraction-based weights
+   .split-7-5 is the contact-page layout, .split-1-1 is the people page,
+   .split-2-1 is the science page (text + floated sidebar).
+   All stack on mobile; second number must equal the first to be equal.
+------------------------------------------------------------------- */
+
+.split-1-1,
+.split-2-1,
+.split-1-2,
+.split-7-5 {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 64em) {
+    .split-1-1 { grid-template-columns: 1fr 1fr; }
+    .split-2-1 { grid-template-columns: 2fr 1fr; }
+    .split-1-2 { grid-template-columns: 1fr 2fr; }
+    .split-7-5 { grid-template-columns: 7fr 5fr; }
+}
+
+
+/* Text alignment utilities
+   Foundation has its own .text-* classes; these match the same names
+   so page markup can drop inline style="text-align:..." attributes.
+------------------------------------------------------------------- */
+
+.text-justify { text-align: justify; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-left    { text-align: left; }
+
+
+/* Accessibility
+------------------------------------------------------------------- */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
