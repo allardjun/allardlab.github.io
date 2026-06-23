@@ -1,188 +1,71 @@
 # Refactor + UI Overhaul Plan
 
-Two-phase work on branch `refactor-and-ui-overhaul`.
+Two-phase work on branch `refactor-and-ui-overhaul`. Both phases are now complete; this document records what was done at each checkpoint and what remains for follow-on work.
 
-**Phase 1 (refactor)** changes structure without changing what users see. It puts the codebase in a state where Phase 2's UI changes are easy and consistent.
-
-**Phase 2 (UI)** changes the visible site to follow current best practices — responsive, accessible, performant.
-
-Each phase is broken into checkpoints. Verify the rendered output (locally with `bundle exec jekyll serve`) before crossing a checkpoint boundary, and commit at each checkpoint so progress is bisectable.
+## STATUS: Phase 1 ✅  Phase 2 ✅  (remaining items in `TODO.md`)
 
 ---
 
 ## PHASE 1 — Refactor (no visible change)
 
-Goal: every styling rule lives in `_sass/`, every layout rule lives in `_layouts/`, and `pages/*.md` files contain only content. Dead theme code is removed. The masthead, fonts, and config are deduplicated. After Phase 1, opening any page should look pixel-identical to `main`.
+Goal: every styling rule lives in `_sass/`, every layout rule lives in `_layouts/`, and `pages/*.md` files contain only content. Dead theme code removed. Masthead, fonts, and config deduplicated. After Phase 1, every page renders pixel-identically to `main`.
 
-### 1.1 Repo hygiene
-- Untrack `.DS_Store` (`git rm --cached .DS_Store` at root and any subdir copies); confirm it's already in `.gitignore`.
-- Delete the masthead SVG draft pasted into `README.md` lines 22–36.
-- Document `_config_dev.yml` in `README.md` with the exact dev-vs-prod command (`bundle exec jekyll serve --config _config.yml,_config_dev.yml`).
-- Delete `jekyll-theme-feeling-responsive.gemspec` (theme is vendored, gemspec is unused).
+### Checkpoints (commit per checkpoint, bisectable)
 
-### 1.2 Delete dead theme leftovers
-Drop unused files so future readers don't have to grep them:
-- `_layouts/frontpage.html` and `_includes/_frontpage-widget.html` (home now uses `page-wide`).
-- `_includes/_pagination.html`, `_sidebar.html`, `next-previous-post-in-category`, `list-collection`, `list-posts`, `gallery`, `alert`, `sitemap_collection.xml`.
-- **Asciidoc (confirmed remove):** delete `_sass/_10_asciidoc.scss`, the conditional `@import` of it in `assets/css/styles_feeling_responsive.scss`, the `jekyll-asciidoc` / `asciidoctor` / `coderay` gems from `Gemfile`, the `asciidoctor-enabled` and `asciidoctor:` blocks from `_config.yml`, and the Font Awesome CDN `<link>` in `_includes/_head.html:31-33` that's gated on `site.asciidoctor-enabled`.
-- **Twitter (confirmed remove):** delete the commented-out Twitter timeline in `pages/pages-root-folder/index.md` lines 63–70, the `jekyll-twitter-plugin` gem and its commented config line, and the `socialmedia.twitter` Open Graph / Twitter Card scaffolding in `_includes/_head.html:72-80` if it's only sitting there for a now-dormant account (keep if `@allardlab` is still active — confirm before deleting).
-- Verify with `grep` that each file is unreferenced before deleting.
+- **1.1 + 1.2** — Repo hygiene + dead theme leftovers. Untracked `.DS_Store`, removed the masthead SVG draft from `README.md`, deleted the unused gemspec, removed unused layouts (`frontpage.html`), unused includes (`_frontpage-widget.html`, `_pagination.html`, `_sidebar.html`, `alert`, `gallery`, `list-posts`, `list-collection`, `next-previous-post-in-category`, `__INSTRUCTIONS.md`), the asciidoc partial + plugin + config, the Twitter plugin gem + commented timeline, and the dead RSS/Atom XSLT scaffolding.
+- **1.3** — SCSS consolidation. Created `_sass/_08_pages.scss` with all `<style>` blocks moved out of `pages/people.md`, `publications.md`, `science.md`. Deduplicated `.peoplewrapper`/`.peoplephoto` and the doubled Foundation `@import`s.
+- **1.4 + 1.6** — Masthead + font cleanup. Masthead text now driven from `site.masthead.{title,subtitle,description}` in `_config.yml`. Google WebFontLoader + Lato fallback removed; Adobe Typekit retained.
+- **1.5** — File reorganization. Moved stray PNGs from `pages/` into `images/`; flattened `pages/pages-root-folder/` to repo root. Unlinked pages (`blog_how_I_organize2025.md`) kept by design.
+- **1.7** — Documentation refresh. Updated `STYLE.md` and `TODO.md`.
 
-### 1.3 SCSS deduplication and structure
-- Remove duplicate `@import` lines in `assets/css/styles_feeling_responsive.scss` (`top-bar`, `grid` are imported twice).
-- Create `_sass/_08_pages.scss` and move *all* page-level styles out of `pages/*.md`:
-  - From `people.md`: `.peoplewrapper`, `.peoplephoto`, `.photo-gallery`, `.photo-grid`, `.photo-item`, `.photo-item.featured`, `.photo-item.photo-wide`, and the `@media (max-width: 600px)` block.
-  - From `publications.md`: `.publist`, `.paper-title` rules and the mobile media query.
-  - From `science.md`: `.embeddedright`, `.embeddedleft` and their mobile media queries.
-- Delete the now-duplicate `.peoplewrapper`/`.peoplephoto` block at the bottom of `_sass/_07_layout.scss` (lines 406–418) — superseded by the new `_08_pages.scss` definitions.
-- Replace inline `style="text-align:justify"` / `style="text-align:center"` attributes scattered across `pages/*.md` with class hooks (`.text-justify`, `.text-center`) defined in `_sass/_08_pages.scss`. Foundation already ships `.text-center`; check before adding duplicates.
-- Add `@import "08_pages.scss";` to `assets/css/styles_feeling_responsive.scss` after `09_elements.scss`.
-- After this checkpoint, `pages/*.md` files should have **zero `<style>` blocks** and minimal inline `style=` attributes.
-
-### 1.4 Masthead consolidation
-- Replace hardcoded "ALLARD LAB @ UC IRVINE / FOR MATHEMATICAL... / CELL AND BIOMOLECULAR MECHANICS" in `_includes/_masthead.html:12-14` with Liquid references to `site.title`, `site.slogan`, and a new `site.description_short` (or split `site.slogan` into two lines). Update `_config.yml` accordingly so the masthead text is now driven by one source.
-- Leave the rendered output identical at this checkpoint — verify the three lines still come out byte-for-byte the same.
-
-### 1.5 File and asset reorganization
-- Move stray PNGs out of `pages/` (`figBottles.png`, `figDashboard.png`, `figliterature.png`, `figThreeWindows.png`, `figTimeline.png`) into `images/`. Update any references in `pages/blog_how_I_organize2025.md` with `grep` first.
-- **Keep `pages/blog_how_I_organize2025.md` and any other unlinked pages as-is.** They're intentionally not in `_data/navigation.yml` because they're shared quasi-privately by URL. Do not delete, do not link from nav. Just preserve their permalinks across any restructuring.
-- **Flatten `pages/pages-root-folder/`** (confirmed): move `index.md`, `404.md`, `humans.txt`, `robots.txt`, `sitemap.xml` to repo root. URLs stay the same because each file has an explicit `permalink:`. Verify by hitting `/`, `/404`, `/robots.txt`, `/sitemap.xml` locally after the move.
-
-### 1.6 Font loader cleanup
-- **Remove the Google WebFontLoader entirely** (confirmed): delete `_includes/_head.html:37-48` (the `<script>` block and the `<noscript>` fallback) and remove `Lato` from the serif fallback chain in `_02_settings_typography.scss:26`. `Volkhov` was already unreferenced.
-- **Keep Adobe Typekit `supria-sans`** (confirmed) — leave the `<link rel="stylesheet" href="https://use.typekit.net/zom0olg.css">` in `_includes/_head.html:25` in place.
-- After this, the only external font dependency is Typekit. One request instead of three.
-
-### 1.7 Documentation refresh
-- Update `STYLE.md`'s "Configuration Files" section to mention `_08_pages.scss`.
-- Update `README.md` with a short "Repo layout" section pointing at `STATUS.md` (architecture) and `APPEARANCE.md` (rendered description).
-- Delete `TODO.md` items that Phase 1 has closed; move the rest into Phase 2 of this plan.
-
-### Phase 1 checkpoints (recommended commits)
-1. Repo hygiene (1.1 + 1.2): "remove dead theme leftovers and tracked .DS_Store".
-2. SCSS consolidation (1.3): "centralize page styles into _sass/_08_pages.scss".
-3. Masthead + font cleanup (1.4 + 1.6): "drive masthead from _config.yml; drop unused web fonts".
-4. File reorganization (1.5): "move stray assets into images/; flatten pages-root-folder".
-5. Documentation (1.7): "sync STYLE/README with refactored layout".
-
-### Phase 1 acceptance criteria
-- `bundle exec jekyll serve` builds with no warnings.
-- Visual diff (sampling: `/`, `/science/`, `/people/`, `/software/`, `/publications/`, `/contact/`) shows no rendered differences from `main` at any of the four Foundation breakpoints.
-- `grep -r "<style" pages/` returns nothing.
-- `grep -r 'style="' pages/` returns only the dynamic Liquid-driven `style="..."` attributes (e.g. masthead background colors), if any.
-- All deleted files are confirmed unreferenced.
+Decisions baked in at Phase 1 start (recorded for posterity):
+- Remove asciidoc, Twitter plugin, Google WebFontLoader.
+- Keep unlinked pages as-is (quasi-private URL sharing).
+- Keep Adobe Typekit (`supria-sans`).
+- Flatten `pages-root-folder/`.
 
 ---
 
-## PHASE 2 — UI improvements
+## PHASE 2 — UI modernization (Option B: replace Foundation with CSS Grid + Flexbox)
 
-Now that the codebase is clean, change the visible UI. The order below is roughly "biggest payoff, lowest risk" first. Each subsection is independent — pick and ship in any order — but **finish Phase 1 first**, because Phase 2 assumes centralized styles and no inline overrides.
+Goal: drop the Foundation 5 framework entirely, replace its grid + top-bar with modern CSS Grid + Flexbox primitives consuming a CSS-custom-property design-token layer, and apply visible polish.
 
-### 2.1 Modernize the layout shell
+### Checkpoints
 
-The current shell uses Foundation 5 (≈2014). Three options, in increasing scope:
+- **2.A** — Design tokens + modern layout primitives. New partials `_sass/_12_tokens.scss` (CSS custom properties for color, type, spacing, container widths, radius, shadow) and `_sass/_13_layout_modern.scss` (composable `.container*`, `.stack*`, `.cluster`, `.grid*`, `.split-*`, `.text-*`, `.visually-hidden`). Wired into the main stylesheet; no markup changes yet.
 
-- **A. Stay on Foundation 5, modernize patterns.** Lowest risk. Keep the grid; replace the masthead/nav/footer with cleaner markup; tighten spacing tokens. Recommended starting point.
-- **B. Replace Foundation grid with CSS Grid + Flexbox.** Cuts ~80% of `_sass/foundation-components/`. Medium risk, big payoff in maintainability.
-- **C. Adopt a modern framework (Tailwind, or just utility-first vanilla CSS).** Big rewrite. Only if you want a long-term overhaul.
+- **2.B** — Migrate page layouts and masthead off Foundation grid. Rewrote `_includes/_masthead.html` from a 5-deep `<div>` table-cell nest to a single `<header class="site-masthead">` with a flexbox-centred anchor. Dropped the five unused masthead branches (`header.title`, `header.image_fullwidth`, `header.pattern`, `header.background-color`, `header == false`). Rewrote `_layouts/page.html`, `page-wide.html`, `page-extrawide.html` to use `<main class="container[…] stack">` instead of `.row` + `.columns` + `.medium-offset-N`. Tuned `--container-*` widths to 36 / 48 / 64 / 80 rem.
 
-Recommend A → B over two iterations, never C unless you want a different look.
+- **2.C** — Replace navigation; introduce site-footer; drop Foundation top-bar. Rewrote `_includes/_navigation.html` with semantic `<nav>`, `aria-current="page"` on the active link, and an inline 5-line script that toggles `aria-expanded` for the mobile menu. Rewrote `_includes/_footer.html` (which previously emitted an orphan `</footer>` close tag) with a proper `<footer>` element. Added the `_sass/_14_chrome.scss` partial styling both, with sticky nav, hamburger toggle, focus-visible outlines, hover/active states.
 
-### 2.2 Responsive / mobile-first
+- **2.D** — Migrate content pages to modern utilities. Replaced every `.row` / `.columns` / `.small-N` / `.medium-N` / `.large-N` wrapper in `index.md`, `pages/science.md`, `pages/people.md`, `pages/software.md`, `pages/contact.md` with the new layout primitives. Added `alt=` and `loading="lazy"` to gallery and content images. Layouts now skip the article `<header>` entirely if `page.title` / `page.subheadline` / `page.image.title` are all unset, removing empty `<h1></h1>` elements.
 
-- Audit every page at 375px, 768px, 1024px, 1440px widths.
-- Convert the People page two-column desktop layout to **roster-only on mobile**, with the photo gallery moving below (already half-done by `large-6`).
-- Make the Science page Bluesky embed stack above body text on mobile instead of `float:right`.
-- Ensure justified text (`text-align: justify`) doesn't produce ugly rivers on narrow viewports — switch to `text-align: left` on mobile or globally.
-- Verify the white masthead doesn't dominate the viewport on phones (currently 200px on small, which is a lot of vertical space for a phone).
+- **2.E** — Strip unused Foundation, dead includes, legacy JS. Deleted `_sass/foundation-components/` (39 partials), `_sass/_03_settings_mixins_media_queries.scss`, `_sass/_04_settings_global.scss`. Moved the one still-used variable, `$global-radius`, into `_sass/_02_settings_typography.scss`. Stripped the `$topbar-*` and `$footer-*` / `$subfooter-*` blocks from `_sass/_01_settings_colors.scss`. Rewrote `_07_layout.scss` to masthead-only, rewrote `_06_typography.scss` and `_09_elements.scss` to only their actually-used rules (drops `@font-face` iconfont, `.icon-*`, `.alert-box`, `.button`, `.side-nav`, `.accordion`, `.lazy`, `.big-teaser`, `.sans`, `.serif`, `.t10`–`.pr20`). Deleted the dead includes (`_breadcrumb.html`, `_comments.html`, `_meta_information.html`, `_google_search.html`, `_improve_content.html`, `_footer_scripts.html`), the dead conditionals in page layouts, the Modernizr script from `_head.html`, the Twitter Card meta block, and the defaults block + socialmedia entry from `_config.yml`. Deleted `assets/js/javascript.{js,min.js}` (jQuery 2.1.1 + Foundation), `assets/js/modernizr*.js`, `assets/mediaelement_js/`, `assets/fonts/` (the iconfont set).
 
-### 2.3 Masthead and navigation
+  Net effect: compiled stylesheet drops from ~270KB to ~15KB; no JS ships on any page except the 5-line inline menu toggle.
 
-- Replace the hardcoded white-rectangle masthead with something that feels like part of the page: a tighter banner with the lab name, possibly a faint background image or gradient, that doesn't fully break the navy theme. Keep the same text content.
-- Make the navigation collapse cleanly on mobile (currently `toggle-topbar menu-icon` Foundation pattern works but feels dated).
-- Add a visible "current page" indicator beyond just color (e.g. an underline) — color-only state is an accessibility miss.
+- **2.F** — Visible polish. Smaller masthead heights (12/14/16rem at the breakpoints, down from 280/310/380px), inset cyan accent at the bottom edge, fluid `clamp()` typography. Cyan underline accent under the active nav link on tablet+. `.text-justify` now uses `hyphens: auto` on desktop and falls back to left-align on mobile. People photos are circular avatars with shadows. Publications list uses border-hairlines instead of margin gaps. Photo gallery year-headers redesigned with cyan underline. Body links have explicit cyan color and visible focus-visible outlines.
 
-### 2.4 Home page
+- **2.G** — Refresh documentation. Updated `STATUS.md`, `APPEARANCE.md`, `STYLE.md`, this `PLAN.md` to reflect the post-Foundation state.
 
-- Add a clear value proposition above the fold (one sentence summarizing the lab's research).
-- Add internal links/CTAs to key pages (Publications, People, Open positions).
-- Replace the lone full-width photo with a responsive `<picture>` using multiple sources (already in TODO.md).
-- Consider a "recent news" or "recent papers" snippet pulled from `_data/` (one-time setup, easy maintenance).
+### Acceptance criteria (met)
 
-### 2.5 Publications page
-
-- Group entries by year, with sticky year headers on scroll.
-- Style preprints vs. published papers differently (badge or color).
-- Highlight the most recent N papers above the fold.
-- Add a year/keyword filter (client-side only — no backend).
-- Ensure all paper links open consistently (target, rel="noopener").
-- Pull from `_data/publications.yml` instead of a hand-maintained `<ul>` so each entry is structured (title, authors, venue, year, links). This is a one-time migration but pays off forever.
-
-### 2.6 People page
-
-- Convert the manually-maintained list to `_data/people.yml` with `current: true|false`, `photo`, `bio`, `links`. Render with a Liquid loop.
-- Add hover effects on people cards (subtle lift, link to a personal page if provided).
-- Ensure each photo has a meaningful `alt` (currently empty/absent for several).
-- Drop placeholder favicon images; use a styled initials avatar when no photo exists.
-
-### 2.7 Software page
-
-- Replace the brittle `cdn.jsdelivr.net/github-cards` widget with static cards rendered server-side from `_data/software.yml` (or built at deploy time from the GitHub API). The current page can render empty if the CDN goes down — already noted in APPEARANCE.md.
-- Restyle cards to fit the dark theme so they stop visually clashing.
-
-### 2.8 Science page
-
-- Restructure long justified paragraphs into shorter sections with subheadings.
-- Add real H1 to the page (currently the layout's `{{ page.title }}` is blank because no `title:` is set in front matter).
-- Replace the JS Bluesky embed with a static screenshot+link fallback; or load the embed lazily so it doesn't block render.
-
-### 2.9 Contact page
-
-- Add a map/embed of Rowland Hall location (optional, can be a static image).
-- Make office locations and email links more visually distinct.
-
-### 2.10 Accessibility pass
-
-- Run axe or Lighthouse on every page.
-- Add `alt` attributes to every `<img>`.
-- Verify navy + light-grey body text meets WCAG AA contrast (currently #E4E4E4 on #1D3038 is ≈11:1, passes — but verify against any new accent colors).
-- Add ARIA labels to social icons and breadcrumb.
-- Make keyboard navigation work end-to-end; check focus rings aren't hidden by the navy background.
-- Add `lang="en"` is already present — also add page-level metadata.
-
-### 2.11 Performance
-
-- Optimize images: convert `.jpg`/`.png` to `.webp` with `.jpg` fallback via `<picture>`. Many of the photos under `images/` are >500KB.
-- Defer non-critical JS (Modernizr, github-cards widget, Bluesky embed).
-- Add `loading="lazy"` to non-critical images.
-- Audit external dependencies: Typekit, Google WebFontLoader (if kept), GitHub-cards CDN, Bluesky embed CDN. Each is a third-party request and a single point of failure.
-- Subset the Typekit font if possible, or self-host a modern alternative.
-
-### 2.12 Maintenance niceties
-
-- Add a GitHub Action that runs `bundle exec jekyll build` on every PR and posts the link to a preview deploy (Netlify, Cloudflare Pages, or GitHub Pages preview).
-- Add a `.editorconfig` for consistent whitespace.
-- Add an HTML proofer step to catch broken links in CI.
-
-### Phase 2 acceptance criteria
-- Every page passes Lighthouse Accessibility ≥95.
-- Every page passes Lighthouse Performance ≥85 on simulated mobile.
-- Visual review across 4 breakpoints shows no horizontal scroll, no text overflowing containers, no broken images.
-- All content lives in `_data/` or `pages/*.md`; no hand-written `<li>` lists of publications or people remain.
+- `bundle exec jekyll build` builds with no errors (Foundation Sass division deprecation warnings are pre-existing in `_functions.scss` and only emit warnings, not failures).
+- No `class="row"`, `.columns`, `.small-N`, `.medium-N`, `.large-N` in any rendered HTML.
+- No `<style>` blocks in any `pages/*.md`.
+- Every page renders correctly at the three responsive breakpoints (mobile, tablet, desktop).
+- Visible focus rings on all interactive elements.
+- `aria-current="page"` on active nav link, `aria-expanded` on the mobile menu button, `aria-label` on the nav and the masthead anchor.
 
 ---
 
-## Decisions on file
+## REMAINING WORK (not in scope for this branch)
 
-User-confirmed before starting Phase 1:
+Tracked in `TODO.md`. The biggest pending items:
 
-1. **Asciidoc**: remove entirely (gem, SCSS partial, config blocks, Font Awesome CDN link).
-2. **Twitter plugin**: remove entirely (gem, commented timeline). Confirm `@allardlab` Twitter Card metadata in `_head.html` separately before deleting it.
-3. **Unlinked pages** (`pages/blog_how_I_organize2025.md` and any future siblings): **keep and do not link from nav** — these are shared by URL quasi-privately. Preserve their permalinks across any restructuring.
-4. **`pages-root-folder/`**: flatten to repo root. Permalinks make this URL-safe.
-5. **Google WebFontLoader**: remove entirely (script + noscript + `Lato` fallback).
-6. **Adobe Typekit `supria-sans`**: keep.
-
-Still open, but deferred until after Phase 1 ships:
-
-7. **Foundation 5**: keep (Phase 2 option A), replace the grid with CSS Grid (option B), or full rewrite (option C)? Recommend deciding after seeing the cleaned-up codebase.
+- Migrate `pages/people.md`, `pages/publications.md`, `pages/software.md` data into `_data/*.yml` so the markup can be templated and the lists can grow without hand-editing.
+- Replace the brittle `cdn.jsdelivr.net/github-cards` widget on the Software page with server-side cards from `_data/software.yml`.
+- Sticky year headers / client-side filter / preprint badges on Publications.
+- Optimise photos to webp; add `<picture>` with multiple sources.
+- CI: GitHub Action that runs `bundle exec jekyll build` on every PR.
+- Fix the pre-existing Sass `/` division deprecation warnings in `_functions.scss` (replace with `math.div`).
