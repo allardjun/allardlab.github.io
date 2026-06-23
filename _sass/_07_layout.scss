@@ -22,57 +22,74 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 280px;
-        padding: var(--space-6) var(--space-4);
+        min-height: 12rem; /* ~192px */
+        padding: var(--space-8) var(--space-6);
         background: var(--color-surface);
         color: var(--color-surface-fg);
+        box-shadow: inset 0 -3px 0 0 var(--color-accent);
     }
 }
 
 @media (min-width: 64em) {
-    .site-masthead { min-height: 310px; }
+    .site-masthead { min-height: 14rem; }
 }
 
 @media (min-width: 90em) {
-    .site-masthead { min-height: 380px; }
+    .site-masthead { min-height: 16rem; }
 }
 
 .site-masthead__link {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--space-1);
     text-align: center;
     text-decoration: none;
     color: inherit;
+    border: 0;
 
     &:hover,
     &:focus,
     &:visited {
         color: inherit;
     }
+
+    &:hover .masthead-title,
+    &:focus .masthead-title {
+        color: var(--color-accent-hover);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-accent);
+        outline-offset: 4px;
+    }
 }
 
 .masthead-title {
-    font-size: 22.9pt;
+    font-family: $font-family-sans-serif;
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
     font-weight: bold;
     color: black;
-    font-family: $font-family-sans-serif;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
     display: block;
-    margin-bottom: -5px;
+    transition: color .2s;
 }
 
 .masthead-subtitle {
-    font-size: 10pt;
+    font-family: $font-family-sans-serif;
+    font-size: clamp(0.625rem, 0.5rem + 0.35vw, 0.75rem);
     font-weight: bold;
     color: black;
-    font-family: $font-family-sans-serif;
+    letter-spacing: 0.08em;
     display: block;
 }
 
 .masthead-description {
-    font-size: 14.9pt;
+    font-family: $font-family-sans-serif;
+    font-size: clamp(0.9375rem, 0.75rem + 0.9vw, 1.25rem);
     font-weight: bold;
     color: black;
-    font-family: $font-family-sans-serif;
+    letter-spacing: 0.05em;
     display: block;
 }

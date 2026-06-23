@@ -138,14 +138,27 @@
 
 
 /* Text alignment utilities
-   Foundation has its own .text-* classes; these match the same names
-   so page markup can drop inline style="text-align:..." attributes.
 ------------------------------------------------------------------- */
 
-.text-justify { text-align: justify; }
-.text-center  { text-align: center; }
-.text-right   { text-align: right; }
-.text-left    { text-align: left; }
+.text-justify {
+    text-align: justify;
+    hyphens: auto;
+    text-justify: inter-word;
+    word-break: normal;
+}
+
+@media (max-width: 40em) {
+    /* Justified text leaves bad rivers on narrow viewports — fall
+       back to left-aligned on mobile. */
+    .text-justify {
+        text-align: left;
+        hyphens: none;
+    }
+}
+
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-left   { text-align: left; }
 
 
 /* Accessibility

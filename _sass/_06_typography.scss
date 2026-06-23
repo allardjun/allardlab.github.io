@@ -19,19 +19,18 @@ span.paper-title {
 
 a,
 a:link {
+    color: $juns-CyPu-Cyan;
     transition: color .2s, border-color .2s, background-color .2s;
 }
 
 a:hover {
-    color: darken($juns-CyPu-Cyan, 20%);
+    color: darken($juns-CyPu-Cyan, 15%);
 }
 
-a:focus {
-    color: lighten($juns-CyPu-Navy, 20%);
-}
-
-a:active {
-    color: darken($juns-CyPu-Navy, 20%);
+a:focus-visible {
+    outline: 2px solid $juns-CyPu-Cyan;
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 p a,
@@ -42,7 +41,7 @@ article a {
 
 p a:hover,
 article a:hover {
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
 }
 
 
