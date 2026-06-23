@@ -5,46 +5,22 @@ sitemap:
 ---
 @charset "utf-8";
 
+// Project settings — colors, typography, design tokens.
 @import "functions.scss";
 @import "01_settings_colors.scss";
 @import "02_settings_typography.scss";
-@import "03_settings_mixins_media_queries.scss";
-@import "04_settings_global.scss";
-@import "05_normalize.scss"; // normalize.css v3.0.2
+@import "12_tokens.scss";
 
-@import "foundation-components/top-bar";
-@import "foundation-components/accordion";
-@import "foundation-components/alert-boxes";
-@import "foundation-components/breadcrumbs";
-@import "foundation-components/block-grid";
-@import "foundation-components/button-groups";
-@import "foundation-components/buttons";
-@import "foundation-components/clearing";
-@import "foundation-components/dropdown";
-@import "foundation-components/dropdown-buttons";
-@import "foundation-components/flex-video";
-@import "foundation-components/forms";
-@import "foundation-components/grid";
-@import "foundation-components/inline-lists";
-@import "foundation-components/keystrokes";
-@import "foundation-components/panels";
-@import "foundation-components/reveal";
-@import "foundation-components/side-nav";
-@import "foundation-components/sub-nav";
-@import "foundation-components/tables";
-@import "foundation-components/thumbs";
-@import "foundation-components/type";
-@import "foundation-components/visibility";
+// CSS reset — normalize.css v3.0.2.
+@import "05_normalize.scss";
 
+// Project styles — element base, typography, layout chrome, page-scoped.
 @import "06_typography.scss";
 @import "07_layout.scss";
 @import "08_pages.scss";
 @import "09_elements.scss";
 @import "11_syntax-highlighting.scss";
 
-// Modern layout layer — design tokens + Grid/Flex primitives.
-// These coexist with the Foundation layer during the migration off
-// the 12-column grid (PLAN.md Phase 2 Option B).
-@import "12_tokens.scss";
+// Modern layout layer — Grid/Flex primitives + site chrome.
 @import "13_layout_modern.scss";
 @import "14_chrome.scss";
