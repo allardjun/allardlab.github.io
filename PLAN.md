@@ -1,8 +1,8 @@
 # Refactor + UI Overhaul Plan
 
-Two-phase work on branch `refactor-and-ui-overhaul`. Both phases are now complete; this document records what was done at each checkpoint and what remains for follow-on work.
+Two-phase work on branch `refactor-and-ui-overhaul`. Both phases are complete, with one round of regression fixes and a small batch of visual tweaks applied on top. This document records what was done at each checkpoint and what remains for follow-on work.
 
-## STATUS: Phase 1 ✅  Phase 2 ✅  (remaining items in `TODO.md`)
+## STATUS: Phase 1 ✅  Phase 2 ✅  Regression-fix + tweaks ✅  (remaining items in `TODO.md`)
 
 ---
 
@@ -47,6 +47,23 @@ Goal: drop the Foundation 5 framework entirely, replace its grid + top-bar with 
 - **2.F** — Visible polish. Smaller masthead heights (12/14/16rem at the breakpoints, down from 280/310/380px), inset cyan accent at the bottom edge, fluid `clamp()` typography. Cyan underline accent under the active nav link on tablet+. `.text-justify` now uses `hyphens: auto` on desktop and falls back to left-align on mobile. People photos are circular avatars with shadows. Publications list uses border-hairlines instead of margin gaps. Photo gallery year-headers redesigned with cyan underline. Body links have explicit cyan color and visible focus-visible outlines.
 
 - **2.G** — Refresh documentation. Updated `STATUS.md`, `APPEARANCE.md`, `STYLE.md`, this `PLAN.md` to reflect the post-Foundation state.
+
+### Post-Phase-2 regression fixes and tweaks
+
+After review, four regressions were identified and fixed in one commit (`1bbfe80`):
+
+1. **Light mode regression** — deleting Foundation's `_04_settings_global.scss` in 2.E also removed the `body { background; color }` rule that consumed `$body-bg` / `$body-font-color`. The site reverted to default white background with black text. Fixed by adding an explicit `body` base block in `_sass/_09_elements.scss`. This is now a load-bearing block that must not be lost again.
+
+2. **Masthead row widths broken** — the three masthead rows (22 / 46 / 31 chars) had been manually tuned to render at approximately equal pixel width in supria-sans using fixed `22.9pt / 10pt / 14.9pt` font sizes. Phase 2.F replaced those with `clamp()` ranges that scaled the rows independently, breaking the design intent. Restored the original pt sizes and documented the constraint with a comment in `_sass/_07_layout.scss`.
+
+3. **Publications "unstyled"** — same root cause as #1. The `.publist` hairlines (`rgba(255, 255, 255, .08)`) and `.paper-title` (`color: #fff`) were invisible on a white background. Fixing #1 fixed this implicitly.
+
+4. **Topbar overflow** — two scenarios: on narrow mobile the long brand "ALLARD LAB @ UC IRVINE" plus the "Menu" text pushed the menu button off-screen; on narrow desktop (40–64em) the six links at desktop padding could push Contact past the right edge. Fixed by using `site.title` ("Allard Lab", 10 chars) for the nav brand, swapping the "Menu" text for a 22×16 hamburger icon, and adding a second nav breakpoint at 64em so the 40–64em range uses tighter link padding.
+
+Then two small visual tweaks landed (`be52b94`, `1cae338`):
+
+- Title→subtitle gap loosened: `.masthead-title` margin-bottom changed from `-5px` to `0.5rem` and `line-height` from `1.1` to `0.7` so the first masthead pair reads visibly looser than the second pair without floating off-baseline.
+- Trailing commas in `pages/publications.md` moved inside the `<span class="paper-title">` so they inherit the title's white color and font weight.
 
 ### Acceptance criteria (met)
 

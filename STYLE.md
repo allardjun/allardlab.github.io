@@ -70,7 +70,7 @@ Delivered via Adobe Typekit (`<link rel="stylesheet" href="https://use.typekit.n
 | `_06_typography.scss` | Links, headings, lists, figures, code, blockquote, footnotes, `.subheadline`, `.teaser` |
 | `_07_layout.scss` | The `.site-masthead` block (white slab with cyan inset accent) |
 | `_08_pages.scss` | Page-scoped rules: `.peoplewrapper`, `.peoplephoto`, `.photo-gallery`, `.photo-grid`, `.photo-item`, `.publist`, `.paper-title`, `.embeddedright`, `.embeddedleft` |
-| `_09_elements.scss` | Anchor-target offset for sticky nav, `.shadow-*` text-shadow helpers |
+| `_09_elements.scss` | `html`/`body` base (applies `$body-bg`, `$body-font-color`, `$body-font-family`, `box-sizing: border-box`), anchor-target offset for sticky nav, `.shadow-*` text-shadow helpers |
 | `_11_syntax-highlighting.scss` | Rouge syntax highlighting colors |
 | `_12_tokens.scss` | CSS custom properties: `--color-*`, `--font-*`, `--text-*`, `--leading-*`, `--space-*`, `--container-*`, `--radius-*`, `--shadow-*` |
 | `_13_layout_modern.scss` | Layout utilities: `.container*`, `.stack*`, `.cluster`, `.grid*`, `.split-*`, `.text-*`, `.visually-hidden` |
@@ -110,11 +110,13 @@ Mobile-first; all consume design tokens.
 ### Masthead (`.site-masthead`, `_sass/_07_layout.scss`)
 
 - **Background:** white surface (`var(--color-surface)`)
-- **Min-height:** 12rem (mobile-hidden), 12rem / 14rem / 16rem at the 40em / 64em / 90em breakpoints
+- **Min-height:** mobile-hidden, then 12rem / 14rem / 16rem at the 40em / 64em / 90em breakpoints
 - **Centring:** flexbox (`align-items: center; justify-content: center`)
-- **Title:** fluid clamp from 1.5rem to 2rem, black, bold, 0.05em tracking
-- **Subtitle:** small, bold, black, 0.08em tracking
-- **Description:** fluid clamp from 0.9375rem to 1.25rem, bold, black, 0.05em tracking
+- **Title row:** `22.9pt` supria-sans bold black, `line-height: 0.7`, `margin-bottom: 0.5rem`
+- **Subtitle row:** `10pt` supria-sans bold black
+- **Description row:** `14.9pt` supria-sans bold black
+- **Why the fixed pt sizes:** the three string lengths (22 / 46 / 31 chars) are manually balanced against these specific point sizes so the rows render at roughly equal pixel width. **Don't change without re-checking visual balance.** The `clamp()` approach used briefly during Phase 2.F broke this and was reverted.
+- **Row spacing:** title carries `margin-bottom: 0.5rem` so the first→second gap is visibly looser than the second→third (which is just the flex `gap: var(--space-1)`).
 - **Accent:** inset 3px cyan line along the bottom edge (bridges into the navy body)
 - **Hover:** title shifts to deeper cyan
 - **Mobile:** hidden — the nav's brand link shows the lab name instead
@@ -123,9 +125,9 @@ Mobile-first; all consume design tokens.
 
 - **Background:** `var(--color-bg)` (navy)
 - **Position:** sticky to the top of the viewport, z-index 100
-- **Mobile:** brand link + `Menu` button + collapsed menu (toggled via `aria-expanded` from a 5-line inline script)
-- **Tablet+:** menu inline (`flex-direction: row`), brand hidden
-- **Link color:** white, uppercase, 15px on desktop
+- **Mobile (< 40em):** brand link (`site.title` = "Allard Lab", with `white-space: nowrap`) + 22×16 hamburger icon button + collapsed menu. The icon is rendered as three `<span>` bars, not a font icon. Toggling uses `aria-expanded` from a 5-line inline script.
+- **Tablet (40–64em):** menu inline (`flex-direction: row`), brand hidden, links use tight padding (`var(--space-2) var(--space-3)`) and 14px font so the six links + Contact's `margin-left: auto` fit comfortably down to 640px wide.
+- **Desktop (≥ 64em):** same layout, links use wider padding (`var(--space-3) var(--space-4)`) and 15px font.
 - **Hover/focus:** cyan text + faint white background
 - **Active page:** cyan text + 2px cyan underline accent (`::after`) plus `aria-current="page"`
 - **Focus visible:** 2px cyan outline
@@ -139,7 +141,7 @@ Mobile-first; all consume design tokens.
 
 ## Responsive breakpoints
 
-Mobile-first, two breakpoints:
+Mobile-first, three breakpoints used by the chrome + page layouts:
 
 - **Tablet:** `min-width: 40em` (~640px)
 - **Desktop:** `min-width: 64em` (~1024px)
@@ -148,12 +150,22 @@ Mobile-first, two breakpoints:
 ## Accessibility
 
 - `aria-current="page"` on active nav link
+- 2px cyan underline accent on active nav link (active state communicated by both colour AND a non-colour cue)
 - Visible `:focus-visible` outlines on nav links, masthead anchor, body links
 - `aria-expanded` toggled by the menu button
 - `aria-label="Primary"` on the nav
 - `loading="lazy"` on all gallery images
-- Skipping the breadcrumb scaffolding — page content starts at the `<main>` element
+- Page content starts at a single semantic `<main>` element
 - Justified text falls back to left-align on mobile to avoid rivers
+
+### Contrast ratios (dark theme, verified analytically)
+
+| Pair | Ratio | WCAG |
+|---|---|---|
+| `#E4E4E4` body text on `#1D3038` navy | 10.6 : 1 | AAA |
+| `#45B29D` cyan accent on `#1D3038` navy | 5.3 : 1 | AA (normal), AAA (large) |
+| `#A4A4A4` muted text on `#1D3038` navy | 5.4 : 1 | AA |
+| `#000` masthead text on `#FFF` surface | 21 : 1 | AAA |
 
 ## When adding new styles
 
@@ -173,6 +185,6 @@ Mobile-first, two breakpoints:
 
 ---
 
-**Last updated:** 2026-06-22
+**Last updated:** 2026-06-24
 **Maintained by:** Allard Lab
 **Stack:** Jekyll + Sass + custom CSS Grid / Flexbox layout (no CSS framework)
