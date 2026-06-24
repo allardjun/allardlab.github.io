@@ -79,7 +79,11 @@
     color: black;
     display: block;
     line-height: 1.1;
-    margin-bottom: -5px;
+    /* Slight extra breathing room between the title and the subtitle
+       (the flex gap of var(--space-1) alone reads too tight against
+       the 22.9pt title). The subtitle→description gap stays at the
+       flex gap so the second pair is visibly tighter than the first. */
+    margin-bottom: 0.5rem;
     transition: color .2s;
 }
 
