@@ -65,31 +65,36 @@
     }
 }
 
+/* Original sizes were tuned so the three text rows have
+   approximately equal rendered width in supria-sans:
+     22.9pt × "ALLARD LAB @ UC IRVINE"            (22 chars)
+     10.0pt × "FOR MATHEMATICAL AND … MODELING OF" (46 chars)
+     14.9pt × "CELL AND BIOMOLECULAR MECHANICS"   (31 chars)
+   Don't change without re-checking the visual balance. */
+
 .masthead-title {
     font-family: $font-family-sans-serif;
-    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+    font-size: 22.9pt;
     font-weight: bold;
     color: black;
-    letter-spacing: 0.05em;
-    line-height: 1.1;
     display: block;
+    line-height: 1.1;
+    margin-bottom: -5px;
     transition: color .2s;
 }
 
 .masthead-subtitle {
     font-family: $font-family-sans-serif;
-    font-size: clamp(0.625rem, 0.5rem + 0.35vw, 0.75rem);
+    font-size: 10pt;
     font-weight: bold;
     color: black;
-    letter-spacing: 0.08em;
     display: block;
 }
 
 .masthead-description {
     font-family: $font-family-sans-serif;
-    font-size: clamp(0.9375rem, 0.75rem + 0.9vw, 1.25rem);
+    font-size: 14.9pt;
     font-weight: bold;
     color: black;
-    letter-spacing: 0.05em;
     display: block;
 }

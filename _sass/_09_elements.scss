@@ -1,9 +1,34 @@
 @charset "utf-8";
-/* Element odds and ends
+/* Element base + odds and ends
 
-   Anchor-target offset so deep-links land below the sticky nav bar,
-   plus shadow utilities used by the masthead area.
+   The body/html base previously came from Foundation's
+   _04_settings_global.scss; reproduced here using the
+   $juns-CyPu-* / $grey-* variables from _01_settings_colors.scss.
+
+   Also: anchor-target offset so deep-links land below the sticky
+   nav bar, plus shadow utilities used elsewhere.
 */
+
+html, body { height: 100%; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { font-size: $base-font-size; }
+
+body {
+    background: $body-bg;
+    color: $body-font-color;
+    font-family: $body-font-family;
+    font-weight: $body-font-weight;
+    font-style: $body-font-style;
+    line-height: $base-line-height;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; }
 
 .shadow-no    { text-shadow: rgba(0, 0, 0, 0) 0 0 0; }
 .shadow-black { text-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px; }

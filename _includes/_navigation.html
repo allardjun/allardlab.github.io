@@ -1,8 +1,12 @@
 <nav class="site-nav" aria-label="Primary">
     <div class="site-nav__inner">
-        <a class="site-nav__brand" href="{{ '/' | absolute_url }}">{{ site.masthead.title }}</a>
+        <a class="site-nav__brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
         <button class="site-nav__menu-button" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">
-            <span aria-hidden="true">Menu</span>
+            <span class="site-nav__menu-button-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
         </button>
         <ul id="primary-menu" class="site-nav__menu" role="list">
             {% for link in site.data.navigation %}

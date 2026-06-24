@@ -40,6 +40,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     padding: var(--space-2) 0;
+    white-space: nowrap;
 
     &:hover,
     &:focus {
@@ -54,11 +55,9 @@
     border: 1px solid transparent;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-2);
     font: inherit;
-    font-size: var(--text-sm);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    flex-shrink: 0;
 
     &:hover,
     &:focus {
@@ -69,6 +68,22 @@
     &:focus-visible {
         outline: 2px solid var(--color-accent);
         outline-offset: 2px;
+    }
+}
+
+/* Hamburger icon (three stacked bars), 22×16px */
+.site-nav__menu-button-icon {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22px;
+    height: 16px;
+
+    > span {
+        display: block;
+        height: 2px;
+        background: currentColor;
+        border-radius: 1px;
     }
 }
 
@@ -159,8 +174,16 @@
     }
 
     .site-nav__link {
+        padding: var(--space-2) var(--space-3);
+        font-size: 0.875rem; /* ~14px */
+    }
+}
+
+/* Desktop: a bit more breathing room on the links */
+@media (min-width: 64em) {
+    .site-nav__link {
         padding: var(--space-3) var(--space-4);
-        font-size: 0.9375rem; /* ~15px */
+        font-size: 0.9375rem;
     }
 }
 
