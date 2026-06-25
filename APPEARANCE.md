@@ -24,9 +24,10 @@ Because body and footer share the navy, the page reads as one continuous dark ca
 
 `layout: page`, ~768px container, vertical stack.
 
-- The page is wrapped in `.text-justify` so paragraphs are justified with auto hyphens on desktop and left-aligned on mobile.
-- Sequence of short prose sections about biopolymers, the lab's mission, multi-scale modeling.
-- Three Bluesky embeds floated alternately right / left / right inside `.embeddedright` / `.embeddedleft` containers (300px wide); body text wraps around them. The embeds render after JS loads; the static fallback block (a styled blockquote) is what's served from disk.
+- `<h1>` "Research", then two short intro paragraphs (the "Lego blocks" framing + the lab's mission), left-aligned.
+- An `<h2>` "Recent work" introduces three alternating "zigzag" rows (`.science-row`). Each row pairs a short research blurb (`<h3>` + one paragraph) with the Bluesky post announcing the matching paper. Rows alternate text-left / card-left / text-left via `.science-row--flip`; on mobile each row stacks blurb-then-card.
+- A closing paragraph names the broader questions (airinemes, membranes) and links to Contact.
+- The Bluesky embeds render after a single `async` `embed.js` (one script for all three cards); the static fallback served from disk is a styled blockquote.
 
 ## People (`/people/`)
 

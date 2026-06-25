@@ -101,20 +101,32 @@
 /* Science
 ------------------------------------------------------------------- */
 
-.embeddedright {
-    float: right;
-    margin: 20px;
+/* Alternating "zigzag" rows: a short research blurb paired with the
+   Bluesky post announcing the paper. Stacks (blurb then card) on mobile;
+   becomes two columns at desktop, with --flip swapping the card to the
+   left for the alternating rhythm. */
+.science-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4) var(--space-8);
+    align-items: center;
 }
 
-.embeddedleft {
-    float: left;
-    margin: 20px;
+.science-row__media {
+    width: 100%;
+    max-width: 24rem;
+    margin-inline: auto;
 }
 
-@media (max-width: 500px) {
-    .embeddedright,
-    .embeddedleft {
-        float: none;
+@media (min-width: 64em) {
+    .science-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Pull the card into the first column so the row reads card → text,
+       while the source order stays text-first for mobile + screen readers. */
+    .science-row--flip .science-row__media {
+        order: -1;
     }
 }
 

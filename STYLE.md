@@ -69,7 +69,7 @@ Delivered via Adobe Typekit (`<link rel="stylesheet" href="https://use.typekit.n
 | `_05_normalize.scss` | Cross-browser reset |
 | `_06_typography.scss` | Links, headings, lists, figures, code, blockquote, footnotes, `.subheadline`, `.teaser` |
 | `_07_layout.scss` | The `.site-masthead` block (white slab with cyan inset accent) |
-| `_08_pages.scss` | Page-scoped rules: `.peoplewrapper`, `.peoplephoto`, `.photo-gallery`, `.photo-grid`, `.photo-item`, `.publist`, `.paper-title`, `.embeddedright`, `.embeddedleft` |
+| `_08_pages.scss` | Page-scoped rules: `.peoplewrapper`, `.peoplephoto`, `.photo-gallery`, `.photo-grid`, `.photo-item`, `.publist`, `.paper-title`, `.science-row` (+ `.science-row--flip`, `.science-row__text`, `.science-row__media`) |
 | `_09_elements.scss` | `html`/`body` base (applies `$body-bg`, `$body-font-color`, `$body-font-family`, `box-sizing: border-box`), anchor-target offset for sticky nav, `.shadow-*` text-shadow helpers |
 | `_11_syntax-highlighting.scss` | Rouge syntax highlighting colors |
 | `_12_tokens.scss` | CSS custom properties: `--color-*`, `--font-*`, `--text-*`, `--leading-*`, `--space-*`, `--container-*`, `--radius-*`, `--shadow-*` |

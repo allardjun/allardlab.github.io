@@ -28,9 +28,12 @@ Phase 1 (refactor) and Phase 2 (UI modernization) are both done on the `refactor
 
 ## Science page (`science.md`)
 
-- Add an H1 (page front matter currently has no `title:`, so the layout's `{{ page.title }}` would render blank — the layout already guards against the empty `<h1></h1>` but the page has no heading at all).
-- Break long justified paragraphs into shorter sections with subheadings.
-- Lazy-load or fallback for the Bluesky embeds (they currently load via the `embed.bsky.app` script on every page view).
+- ✅ Added an `<h1>` ("Research", via `title:` front matter).
+- ✅ Replaced the verbose justified filler with an alternating "zigzag" layout: each paper's Bluesky card pairs with a short research blurb (`.science-row` / `.science-row--flip` in `_08_pages.scss`).
+- ✅ Deduped the Bluesky `embed.js` to a single `async` `<script>` at the end of the page (was one per card).
+- The three blurbs (`Reading the immune signal`, `Building the cell's skeleton`, `The physics of DNA`) are first-draft copy — have Jun review/replace, especially the DNA one (written from the paper's venue, not its abstract).
+- Optional: truly lazy-load the embeds with an IntersectionObserver so `embed.js` only fetches when a card scrolls into view.
+- When the Publications data migration lands, consider sourcing these cards from a `_data/*.yml` "recent papers" list instead of hand-pasting blockquotes.
 
 ## Cross-page
 
