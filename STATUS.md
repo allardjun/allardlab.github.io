@@ -10,13 +10,13 @@ Updated after the Phase 1 refactor and Phase 2 UI modernization on the `refactor
 - `_layouts/*.html` — Liquid page templates (`default`, `default-nocompress`, `compress`, `page`, `page-wide`, `page-extrawide`)
 - `_includes/*.html` — partials (`_head.html`, `_masthead.html`, `_navigation.html`, `_footer.html`, `_favicon.html`)
 - `_sass/*.scss` — settings, layout, page-scoped styles, and the modern layout primitives
-- `assets/css/styles_feeling_responsive.scss` — the single SCSS entry point that `@import`s every partial
+- `assets/css/styles.scss` — the single SCSS entry point that `@import`s every partial
 - `pages/*.md` and the root pages (`index.md`, `404.md`, `humans.txt`, `robots.txt`, `sitemap.xml`)
 - `images/`, `files/`, `assets/css`, `assets/img`
 - `Gemfile`, `Gemfile.lock`, `CNAME`, `STYLE.md`, `TODO.md`, `README.md`, `STATUS.md`, `APPEARANCE.md`, `PLAN.md`
 
 **Compiled / build artifacts (in `.gitignore`):**
-- `_site/` — what GitHub Pages serves (HTML + `_site/assets/css/styles_feeling_responsive.css`, `.css.map`)
+- `_site/` — what GitHub Pages serves (HTML + `_site/assets/css/styles.css`, `.css.map`)
 - `.jekyll-cache/`, `.sass-cache/`
 
 ## Frameworks
@@ -33,7 +33,7 @@ No JavaScript ships on any page except a five-line inline script in `_navigation
 
 ## SCSS layer order
 
-`assets/css/styles_feeling_responsive.scss` imports, in order:
+`assets/css/styles.scss` imports, in order:
 
 1. **Settings** — `_functions.scss`, `_01_settings_colors.scss`, `_02_settings_typography.scss`, `_12_tokens.scss`.
    Colors, fonts, the `$global-radius` value, and CSS custom-property design tokens (`--color-*`, `--space-*`, `--text-*`, `--container-*`).
@@ -43,7 +43,7 @@ No JavaScript ships on any page except a five-line inline script in `_navigation
 
 ## Where displayed styles actually come from
 
-The browser loads exactly one stylesheet: `/assets/css/styles_feeling_responsive.css`. Total weight: ~15KB minified.
+The browser loads exactly one stylesheet: `/assets/css/styles.css`. Total weight: ~15KB minified.
 
 - **Body background** — `$body-bg` → `$darktheme-background` → `$juns-CyPu-Navy` = `#1D3038`. Variables defined in `_sass/_01_settings_colors.scss`; applied to the `body` element by the base block in `_sass/_09_elements.scss`. (That `body { background; color; ... }` rule used to live in Foundation's `_04_settings_global.scss`. It must be applied explicitly now that Foundation is gone — losing it once already regressed the site into light mode.)
 - **Body text color** — `$text-color` → `$darktheme-text` → `$grey-1` = `#E4E4E4`, same path.

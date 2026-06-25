@@ -52,7 +52,7 @@ Delivered via Adobe Typekit (`<link rel="stylesheet" href="https://use.typekit.n
 
 ## SCSS architecture
 
-`assets/css/styles_feeling_responsive.scss` imports partials in this order:
+`assets/css/styles.scss` imports partials in this order:
 
 1. **Settings** — `_functions.scss`, `_01_settings_colors.scss`, `_02_settings_typography.scss`, `_12_tokens.scss`.
 2. **Reset** — `_05_normalize.scss` (normalize.css v3).
