@@ -27,6 +27,8 @@ Updated after the Phase 1 refactor and Phase 2 UI modernization on the `refactor
 - **Adobe Typekit** for the `supria-sans` webfont (`_includes/_head.html`).
 - Ruby `3.3.5` (Gemfile).
 
+**Build/deploy environment.** Local development uses **Jekyll 4.3.3** (the Gemfile). Production is currently built by GitHub Pages' legacy "Deploy from a branch" builder, which uses the `github-pages` gem's pinned **Jekyll ~3.10.x in safe mode** — *not* the Gemfile. So local ≠ prod until the CI/CD migration in `TODO.md` (Actions-based deploy with our own bundle) lands.
+
 The site no longer carries a CSS framework. Foundation 5 was removed in Phase 2.E; layout is implemented directly on CSS Grid and Flexbox in two small partials (`_sass/_13_layout_modern.scss` for primitives, `_sass/_14_chrome.scss` for site chrome).
 
 No JavaScript ships on any page except a five-line inline script in `_navigation.html` that toggles the mobile menu's `aria-expanded` attribute.

@@ -40,8 +40,34 @@ Phase 1 (refactor) and Phase 2 (UI modernization) are both done on the `refactor
 - Mobile-first audit at 375 / 768 / 1024 / 1440 widths in a real browser.
 - Image optimisation: convert large jpg/png to webp with jpg fallback via `<picture>`. `loading="lazy"` is already on all gallery + content `<img>`s.
 - Lighthouse pass: Accessibility ≥ 95, Performance ≥ 85 on simulated mobile.
-- CI: GitHub Action that runs `bundle exec jekyll build` on every PR.
 - Fix the pre-existing Sass `/` division deprecation warnings in `_sass/_functions.scss` (replace `/` with `math.div`). They don't fail the build today but will break under Dart Sass 2.0.
+
+## CI / CD
+
+**Current state (the thing to fix).** There is no GitHub Action — `allardlab/main` has no `.github/workflows/`. PRs are not validated before merge. Deployment is GitHub Pages' legacy "Deploy from a branch" builder, which runs automatically on push to the publishing branch using the `github-pages` gem's **pinned Jekyll (~3.10.x) in safe mode** — *not* your Gemfile. We develop locally on **Jekyll 4.3.3**, so local ≠ prod: a page can pass `jekyll serve` and still render differently (or fail) once deployed. Both plugins (`jekyll-gist`, `jekyll-paginate`) are on the Pages allowlist, so the gap is purely the Jekyll version.
+
+**Plan (single workflow, fork → PR as usual):**
+
+1. Add `.github/workflows/deploy.yml` with two jobs:
+   - **build** — runs on `pull_request` *and* `push` to `main`: `bundle exec jekyll build` with `JEKYLL_ENV=production` against the committed `Gemfile.lock` (Jekyll 4.3.3). Fails the check on any build error. Fork PRs run this with a read-only token / no secrets — fine for a build check.
+   - **deploy** — runs only on `push` to `main`: uploads the built `_site` via `actions/upload-pages-artifact` + `actions/deploy-pages`. This makes **prod build with our bundle (4.3.3), killing the version drift.**
+2. (Optional, can be a follow-up) add an HTMLProofer step to the build job to catch broken internal links / missing images / missing PDFs.
+
+**Manual steps — org admin only, not doable from the repo (record who/when done):**
+
+- **Settings → Pages → Source: change "Deploy from a branch" → "GitHub Actions".** Until this is flipped, the new `deploy` job will not actually publish (and the legacy builder keeps running). Do this *after* the workflow's `build` job has passed green at least once.
+- **Settings → Branches → branch-protection rule on `main`:** require the `build` check to pass before merge. (Makes CI gate merges instead of merely advising.)
+
+**⚠️ Reversion plan — if the 3.10.x → 4.3.3 switch breaks the build or the live site:**
+
+The risk is that something the legacy Jekyll 3.10 builder tolerated breaks under our Jekyll 4.3.3 (or vice-versa) — e.g. Sass `/`-division (see the deprecation item above), a Liquid filter behaving differently, or a plugin mismatch. To roll back to the known-good legacy builder:
+
+1. **Settings → Pages → Source: switch back to "Deploy from a branch"** (select `main` / root). GitHub immediately resumes the legacy ~3.10.x build from the branch — no code change required, and it's the exact pipeline running today. This alone restores the site.
+2. Disable or delete the Actions deploy so it stops failing: either revert the PR that added `.github/workflows/deploy.yml`, or comment out its `deploy` job (keep the `build` job — a red build check on PRs is still useful and harmless to the live site).
+3. If a specific page regressed rather than the whole build, the deployed `_site` from the last good legacy build is still what's served until the next branch push, so there's no rush.
+4. Then fix forward locally (most likely the Sass `math.div` change) and re-attempt the Actions deploy.
+
+Key point: the legacy builder is **always available as a fallback** and is selected purely by the Pages "Source" toggle, so reversion is a settings change, not a redeploy.
 
 ## Don't-lose-these footguns
 
