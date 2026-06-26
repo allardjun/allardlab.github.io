@@ -24,20 +24,15 @@ permalink: "/people/"
     MCSB PhD student</div>
 </div>
 <div class="peoplewrapper">
-    <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192" alt=""></div>
-    <div><b>Xialu Stiles</b><br>
-    MCSB PhD student</div>
-</div>
-<div class="peoplewrapper">
-    <div><img class="peoplephoto" src="{{ site.urlimg }}jack_image0_192px.jpeg" width="192" alt="Jack Corrette"></div>
-    <div><b>Jack Corrette</b><br>
-    MCSB PhD student</div>
-</div>
-<div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}austin_192px.jpg" width="192" alt="Austin Marcus"></div>
     <div><b>Austin Marcus</b><br>
     MCSB PhD student<br>
     co-advised with <a href="https://www.math.uci.edu/~cemiles/">Chris Miles</a></div>
+</div>
+<div class="peoplewrapper">
+    <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192" alt=""></div>
+    <div><b>Xialu Stiles</b><br>
+    MCSB PhD student</div>
 </div>
 
 <h1>PAST MEMBERS</h1>
@@ -48,6 +43,11 @@ permalink: "/people/"
     Research scientist<br>
     co-advised with <a href="https://quinlanlab.wordpress.com/">Margot Quinlan</a><br>
     Subsequent position: PhD Program in Biology, Yale</div>
+</div>
+<div class="peoplewrapper">
+    <div><img class="peoplephoto" src="{{ site.urlimg }}jack_image0_192px.jpeg" width="192" alt="Jack Corrette"></div>
+    <div><b>Jack Corrette</b><br>
+    MCSB PhD student</div>
 </div>
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}SohyeonPark_192px.jpeg" width="192" alt="Sohyeon Park"></div>
