@@ -25,9 +25,8 @@ permalink: "/people/"
 </div>
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192" alt=""></div>
-    <div><b>Katie Bogue</b><br>
-    Research scientist<br>
-    co-advised with <a href="https://quinlanlab.wordpress.com/">Margot Quinlan</a></div>
+    <div><b>Xialu Stiles</b><br>
+    MCSB PhD student</div>
 </div>
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}jack_image0_192px.jpeg" width="192" alt="Jack Corrette"></div>
@@ -43,6 +42,13 @@ permalink: "/people/"
 
 <h1>PAST MEMBERS</h1>
 
+<div class="peoplewrapper">
+    <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192" alt=""></div>
+    <div><b>Katie Bogue</b><br>
+    Research scientist<br>
+    co-advised with <a href="https://quinlanlab.wordpress.com/">Margot Quinlan</a><br>
+    Subsequent position: PhD Program in Biology, Yale</div>
+</div>
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}SohyeonPark_192px.jpeg" width="192" alt="Sohyeon Park"></div>
     <div><b>Sohyeon Park</b><br>
