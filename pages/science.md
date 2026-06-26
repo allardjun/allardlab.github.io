@@ -6,9 +6,21 @@ title: Research
 
 <section class="stack" markdown="1">
 
-Biopolymers (flexible rods), biomembranes (fluid sheets, like soap bubbles) and biomolecular bonds are the Lego blocks of cells — reused again and again to build the nanometer-scale machines that let cells divide, crawl, organize their interiors, sense their surroundings and talk to one another.
+Biopolymers (flexible rods), biomembranes (fluid sheets like soap bubbles), and biomolecular bonds are the Lego blocks of cells, used repeatedly inside cells to build a variety of nanometer-sized machines that help perform <em>functions</em>, like allowing cells to divide, crawl, organize their interiors, sense their environment and communicate with other cells.
 
-Our mission is simple: make *rigorous, relevant* contributions to what humanity knows. We use mathematics, physics and computation to work out how living cells use *force, space and time* as problem-solving strategies — with, we hope, a little more curiosity than ego.
+The mission of our research group is to make *rigorous, relevant* contributions to the scientific knowledge of humanity.
+We use computational, mathematical and biophysical approaches to figure out how living cells use *force, space and time* in their *problem-solving strategies*.
+
+Continuum modeling, e.g., fluid dynamics, solid mechanics
+Liu et al 2019, Berg et al 2025
+High-dimensional learning algorithms
+Allard 2025
+Stochastic calculus, e.g., Ito methods
+Newby & Allard 2016, Allard et al 2019
+Classical polymer physics
+Bogue et al 2025, Corrette et al 2025 
+
+We focus on open science including reproducible open code, so that the basic science discoveries we make become part of the *worldwide, multi-generational tapestry* of scientific knowledge that benefits all.
 
 </section>
 
@@ -21,7 +33,8 @@ Our mission is simple: make *rigorous, relevant* contributions to what humanity 
 
 ### Reading the immune signal
 
-How does a T cell read a single molecule of antigen and decide to respond? We model the **immuno-receptors** that do the reading, asking how force and geometry sharpen a noisy signal. A lesson we keep relearning: the best model is the *simplest* one that can still be proven wrong.
+How does a T cell read a single molecule of antigen and decide to respond?
+We model the **immuno-receptors** that do the reading, asking how force and geometry sharpen a noisy signal. 
 
 </div>
 <div class="science-row__media">
@@ -36,7 +49,8 @@ www.biorxiv.org/content/10.1...<br><br><a href="https://bsky.app/profile/did:plc
 
 ### Building the cell's skeleton
 
-Cells assemble their own skeleton on the fly, growing and branching filaments with proteins like **formins**. We study how simple rules at single filaments add up to the architecture of the whole network — and the moment that network snaps into one connected whole, or comes apart.
+Cells assemble their own mechanical structure, growing and branching filaments with proteins like **formins**.
+We study how simple rules at single filaments add up to the architecture of the whole network — and the how that network snaps into one connected whole, or comes apart.
 
 </div>
 <div class="science-row__media">
@@ -51,7 +65,8 @@ www.biorxiv.org/content/10.1...<br><br><a href="https://bsky.app/profile/did:plc
 
 ### The physics of DNA
 
-DNA is one of the cell's flexible rods, and its physics shapes its biology. Using polymer theory, we ask how bending, looping and crowding set what a strand of nucleic acid can actually do — work we love doing alongside experimentalists who keep us honest.
+DNA is both a container for information and a mechanical biopolymer.
+Using polymer theory, we ask how bending, looping and crowding set what a strand of nucleic acid can actually do.
 
 </div>
 <div class="science-row__media">
@@ -65,7 +80,7 @@ academic.oup.com/nar/article/...<br><br><a href="https://bsky.app/profile/did:pl
 
 <section class="stack" markdown="1">
 
-Other questions we are chasing: how cells coordinate across long distances through **airinemes**, and how membranes bend, bud and reshape themselves. If any of this sounds like fun, [come say hello](/contact/).
+Other questions we pursue: how cells coordinate across long distances through **airinemes**, and how membranes bend, bud and reshape themselves.
 
 </section>
 
