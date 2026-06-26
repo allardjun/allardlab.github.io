@@ -4,21 +4,19 @@ permalink: "/science/"
 title: Research
 ---
 
-<section class="stack" markdown="1">
+<section markdown="1">
 
 Biopolymers (flexible rods), biomembranes (fluid sheets like soap bubbles), and biomolecular bonds are the Lego blocks of cells, used repeatedly inside cells to build a variety of nanometer-sized machines that help perform <em>functions</em>, like allowing cells to divide, crawl, organize their interiors, sense their environment and communicate with other cells.
 
 The mission of our research group is to make *rigorous, relevant* contributions to the scientific knowledge of humanity.
 We use computational, mathematical and biophysical approaches to figure out how living cells use *force, space and time* in their *problem-solving strategies*.
 
-Continuum modeling, e.g., fluid dynamics, solid mechanics
-Liu et al 2019, Berg et al 2025
-High-dimensional learning algorithms
-Allard 2025
-Stochastic calculus, e.g., Ito methods
-Newby & Allard 2016, Allard et al 2019
-Classical polymer physics
-Bogue et al 2025, Corrette et al 2025 
+Some of the approaches we use (papers on the [Publications](/publications/) page):
+
+- **Continuum modeling** — e.g. fluid dynamics, solid mechanics <span class="cite">Liu et al. 2019, Berg et al. 2025</span>
+- **High-dimensional learning algorithms** <span class="cite">Allard 2025</span>
+- **Stochastic calculus** — e.g. Itô methods <span class="cite">Newby &amp; Allard 2016, Allard et al. 2019</span>
+- **Classical polymer physics** <span class="cite">Bogue et al. 2025, Corrette et al. 2025</span>
 
 We focus on open science including reproducible open code, so that the basic science discoveries we make become part of the *worldwide, multi-generational tapestry* of scientific knowledge that benefits all.
 
@@ -78,7 +76,7 @@ academic.oup.com/nar/article/...<br><br><a href="https://bsky.app/profile/did:pl
 
 </div>
 
-<section class="stack" markdown="1">
+<section markdown="1">
 
 Other questions we pursue: how cells coordinate across long distances through **airinemes**, and how membranes bend, bud and reshape themselves.
 
