@@ -21,7 +21,7 @@ permalink: "/people/"
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}brady_192px.jpg" width="192" alt="Brady Berg"></div>
     <div><b>Brady Berg</b><br>
-    MSCB PhD student</div>
+    MCSB PhD student</div>
 </div>
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192" alt=""></div>
@@ -31,12 +31,12 @@ permalink: "/people/"
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}jack_image0_192px.jpeg" width="192" alt="Jack Corrette"></div>
     <div><b>Jack Corrette</b><br>
-    MSCB PhD student</div>
+    MCSB PhD student</div>
 </div>
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}austin_192px.jpg" width="192" alt="Austin Marcus"></div>
     <div><b>Austin Marcus</b><br>
-    MSCB PhD student<br>
+    MCSB PhD student<br>
     co-advised with <a href="https://www.math.uci.edu/~cemiles/">Chris Miles</a></div>
 </div>
 
@@ -73,7 +73,7 @@ permalink: "/people/"
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192" alt=""></div>
     <div><b>Trini Nguyen</b><br>
-    MSCB PhD student</div>
+    MCSB PhD student</div>
 </div>
 <div class="peoplewrapper">
     <div><img class="peoplephoto" src="{{ site.urlimg }}Afavicon-192x192.png" width="192" alt=""></div>
